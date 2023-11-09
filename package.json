@@ -12,9 +12,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@t3-oss/env-nextjs": "0.7.1",
     "next": "14.0.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "zod": "3.22.4"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^14.0.1",
