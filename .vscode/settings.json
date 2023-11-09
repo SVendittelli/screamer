@@ -1,4 +1,4 @@
 {
   "typescript.tsdk": "node_modules\\typescript\\lib",
-  "conventionalCommits.scopes": ["next.js"]
+  "conventionalCommits.scopes": ["next.js", "home"]
 }

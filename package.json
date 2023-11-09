@@ -1,6 +1,6 @@
 {
   "name": "screamer",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "analyze": "cross-env ANALYZE=true npm run build",
@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "0.7.1",
+    "clsx": "2.0.0",
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "^14.0.1",
     "@playwright/test": "1.39.0",
+    "@tailwindcss/typography": "^0.5.10",
     "@testing-library/jest-dom": "6.1.4",
     "@testing-library/react": "14.1.0",
     "@testing-library/user-event": "14.4.3",

@@ -2,39 +2,33 @@ import { render, screen } from "@testing-library/react";
 import Home from "./page";
 
 describe("Home", () => {
-  it('renders the "Get started by editing" message', () => {
+  it("renders page title 'Screamer'", () => {
     render(<Home />);
-    const messageElement = screen.getByText(/Get started by editing/i);
+    const messageElement = screen.getByText(/Screamer/);
     expect(messageElement).toBeInTheDocument();
   });
 
-  it("renders the Next.js logo", () => {
+  it("renders three buttons", () => {
     render(<Home />);
-    const logoElement = screen.getByAltText(/Next.js Logo/i);
-    expect(logoElement).toBeInTheDocument();
+    const buttons = screen.getAllByRole("button");
+    expect(buttons.length).toEqual(3);
   });
 
-  it('renders the "Docs" link', () => {
+  it("renders a 'Demo' button", () => {
     render(<Home />);
-    const docsLinkElement = screen.getByText(/Docs$/);
-    expect(docsLinkElement).toBeInTheDocument();
+    const demoButton = screen.getByText(/Demo/);
+    expect(demoButton).toBeInTheDocument();
   });
 
-  it('renders the "Learn" link', () => {
+  it("renders a 'Sign Up' button", () => {
     render(<Home />);
-    const learnLinkElement = screen.getByText(/Learn$/);
-    expect(learnLinkElement).toBeInTheDocument();
+    const signUpButton = screen.getByText(/Sign Up/);
+    expect(signUpButton).toBeInTheDocument();
   });
 
-  it('renders the "Templates" link', () => {
+  it("renders a 'Login' button", () => {
     render(<Home />);
-    const templatesLinkElement = screen.getByText(/Templates$/);
-    expect(templatesLinkElement).toBeInTheDocument();
-  });
-
-  it('renders the "Deploy" link', () => {
-    render(<Home />);
-    const deployLinkElement = screen.getByText(/Deploy$/);
-    expect(deployLinkElement).toBeInTheDocument();
+    const loginButton = screen.getByText(/Login/);
+    expect(loginButton).toBeInTheDocument();
   });
 });
