@@ -1,4 +1,7 @@
 {
-  "typescript.tsdk": "node_modules\\typescript\\lib",
-  "conventionalCommits.scopes": ["next.js", "home"]
+  "conventionalCommits.scopes": ["next.js", "home"],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
