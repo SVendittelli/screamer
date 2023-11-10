@@ -14,21 +14,12 @@ describe("Home", () => {
     expect(buttons.length).toEqual(3);
   });
 
-  it("renders a 'Demo' button", () => {
-    render(<Home />);
-    const demoButton = screen.getByText(/Try demo/);
-    expect(demoButton).toBeInTheDocument();
-  });
-
-  it("renders a 'Sign Up' button", () => {
-    render(<Home />);
-    const signUpButton = screen.getByText(/Sign up/);
-    expect(signUpButton).toBeInTheDocument();
-  });
-
-  it("renders a 'Login' button", () => {
-    render(<Home />);
-    const loginButton = screen.getByText(/Log in/);
-    expect(loginButton).toBeInTheDocument();
-  });
+  it.each([["Try demo"], ["Sign up"], ["Log in"]])(
+    "renders a '%s' button",
+    (text) => {
+      render(<Home />);
+      const button = screen.getByText(text);
+      expect(button).toBeInTheDocument();
+    },
+  );
 });

@@ -4,22 +4,35 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 
-const buttonClasses =
-  "bg-neutral-950 hover:bg-neutral-700 no-underline font-bold py-2 px-4 rounded-full text-center";
-
 export default function Home() {
   return (
-    <main className="prose prose-neutral prose-invert min-h-screen flex flex-col gap-10 items-center justify-center bg-gradient-to-b from-red-800 to-red-600">
-      <header className="flex gap-2">
-        <Image className="not-prose" src={whiteLogo} height={36} alt="" />
-        <h1 className={clsx(creepster.className, "mb-0")}>Screamer</h1>
-      </header>
-      <nav className="flex flex-col gap-2">
-        <Link href="/demo" role="button" className={buttonClasses}>
-          Try demo
+    <main className="min-h-screen w-screen flex flex-col gap-10 items-center justify-center bg-gradient-to-b from-red-800 to-red-600">
+      <header>
+        <Link className="flex gap-2 prose prose-neutral prose-invert" href="/">
+          <Image
+            className="not-prose"
+            src={whiteLogo}
+            height={36}
+            alt="Screamer logo"
+          />
+          <h1 className={clsx(creepster.className, "mb-0")}>Screamer</h1>
         </Link>
-        <button className={buttonClasses}>Sign up</button>
-        <button className={buttonClasses}>Log in</button>
+      </header>
+      <nav className="flex flex-col gap-2 prose prose-neutral prose-invert">
+        {[
+          ["Try demo", "/demo"],
+          ["Sign up", ""],
+          ["Log in", ""],
+        ].map(([text, href]) => (
+          <Link key={text} href={href}>
+            <button
+              className="bg-neutral-950 enabled:hover:bg-neutral-700 disabled:opacity-75 no-underline font-bold py-2 px-4 rounded-full w-full"
+              disabled={href === ""}
+            >
+              {text}
+            </button>
+          </Link>
+        ))}
       </nav>
     </main>
   );
