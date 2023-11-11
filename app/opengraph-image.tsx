@@ -1,13 +1,11 @@
+import { description, title } from "@/app/ui/branding";
 import { ImageResponse } from "next/og";
-
-const tagline =
-  "The original voting app for selecting movies to watch on Halloween";
 
 // Route segment config
 export const runtime = "edge";
 
 // Image metadata
-export const alt = `Screamer - ${tagline}`;
+export const alt = `${title} - ${description}`;
 export const size = {
   width: 1200,
   height: 630,
@@ -41,7 +39,7 @@ export default async function Image() {
           </svg>
           <p tw="text-9xl ml-2">Screamer</p>
         </div>
-        <p tw="w-8/12 text-5xl text-center">{tagline}</p>
+        <p tw="w-8/12 text-5xl text-center">{description}</p>
       </div>
     ),
     {

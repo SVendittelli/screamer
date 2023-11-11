@@ -1,3 +1,4 @@
+import { baseUrl, description, title } from "@/app/ui/branding";
 import { inter } from "@/app/ui/fonts";
 import "@/app/ui/globals.css";
 import type { Metadata } from "next";
@@ -7,9 +8,19 @@ export const metadata: Metadata = {
     template: "%s | Screamer",
     default: "Screamer",
   },
-  description:
-    "The original voting app for selecting movies to watch on Halloween.",
-  metadataBase: new URL("https://halloween.vendittelli.co.uk/"),
+  description,
+  metadataBase: new URL(baseUrl),
+  openGraph: {
+    title,
+    type: "website",
+    locale: "en_GB",
+    url: baseUrl,
+    description,
+  },
+  twitter: {
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({
