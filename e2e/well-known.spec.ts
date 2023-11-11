@@ -9,3 +9,12 @@ test("should serve security.txt", async ({ page }) => {
 
   expect(html).toEqual(expected);
 });
+
+test("should serve dnt-policy.txt", async ({ page }) => {
+  await page.goto("/.well-known/dnt-policy.txt");
+  const html = await page.innerText("pre");
+
+  const expected = readFileSync("./public/.well-known/dnt-policy.txt", "utf8");
+
+  expect(html).toEqual(expected);
+});
