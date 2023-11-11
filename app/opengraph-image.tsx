@@ -15,7 +15,7 @@ export const contentType = "image/png";
 
 export default async function Image() {
   const creepster = fetch(
-    new URL(`../public/Creepster-Regular.ttf`, import.meta.url),
+    new URL(`./Creepster-Regular.ttf`, import.meta.url),
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
