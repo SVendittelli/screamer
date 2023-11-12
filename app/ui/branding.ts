@@ -1,3 +1,5 @@
+import { env } from "@/env.mjs";
+
 /** The title of the application */
 export const title = "Screamer";
 /** The description/tagline of the application */
@@ -6,4 +8,4 @@ export const description =
 /**
  * The base URL of the application. This is used for generating absolute URLs
  */
-export const baseUrl = "https://halloween.vendittelli.co.uk/";
+export const baseUrl = env.BASE_URL ?? "https://halloween.vendittelli.co.uk/";
