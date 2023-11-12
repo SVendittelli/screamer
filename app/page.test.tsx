@@ -22,4 +22,13 @@ describe("Home", () => {
       expect(button).toBeInTheDocument();
     },
   );
+
+  it("has a footer containing the current year", () => {
+    const currentYear = new Date().getFullYear();
+    render(<Home />);
+    const footer = screen.getByText(new RegExp(currentYear.toString()));
+    expect(footer).toBeInTheDocument();
+    expect(footer).toBeVisible();
+    expect(footer).toHaveTextContent(/^© 2023/);
+  });
 });
