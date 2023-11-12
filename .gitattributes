@@ -113,6 +113,7 @@
 *.less            text
 *.ls              text
 *.map             text -diff
+*.mjs             text
 *.od              text
 *.onlydata        text
 *.php             text diff=php
