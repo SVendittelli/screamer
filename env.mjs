@@ -9,9 +9,9 @@ export const env = createEnv({
       .transform((value) => value === "true"),
     BASE_URL: z.string().optional(),
     CI: z
-      .enum(["true", "false"])
+      .string()
       .optional()
-      .transform((value) => value === "true"),
+      .transform((value) => !!value && value !== "false" && value !== "0"),
     PORT: z.coerce.number().default(3000),
   },
   client: {},
