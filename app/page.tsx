@@ -8,7 +8,7 @@ export default function Home() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="min-h-screen w-screen flex flex-col items-center justify-between p-4 bg-gradient-to-b from-red-800 to-red-600">
+    <div className="min-h-screen w-screen flex flex-col items-center justify-between p-4 bg-gradient-to-b from-red-900 via-red-600 to-red-900">
       <header>
         <Link className="flex gap-2 prose prose-neutral prose-invert" href="/">
           <Image
@@ -36,7 +36,7 @@ export default function Home() {
           </Link>
         ))}
       </main>
-      <footer className="prose prose-neutral prose-invert">
+      <footer className="prose prose-neutral prose-invert font-bold">
         © 2023{currentYear > 2023 ? `-${currentYear}` : ""}
       </footer>
     </div>
