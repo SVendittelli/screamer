@@ -40,3 +40,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Acknowledgements
 
 Favicons generated with [RealFaviconGenerator](https://realfavicongenerator.net/).
+
+[.gitattributes](./gitattributes) and [check-gitattributes.sh](./check-gitattributes.sh) sourced from [.gitattributes Templates](https://github.com/gitattributes/gitattributes).

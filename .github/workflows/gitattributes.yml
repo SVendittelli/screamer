@@ -1,0 +1,23 @@
+name: Verify .gitattributes
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Make check-gitattributes.sh executable
+        run: chmod +x check-gitattributes.sh
+
+      - name: Run check-gitattributes.sh
+        run: ./check-gitattributes.sh
