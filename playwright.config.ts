@@ -67,7 +67,7 @@ export default defineConfig({
   webServer: env.CI
     ? undefined
     : {
-        command: "npm run dev:test",
+        command: "npm run dev",
         url: baseURL,
         timeout: 120 * 1000,
         reuseExistingServer: true,

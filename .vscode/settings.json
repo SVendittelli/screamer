@@ -1,5 +1,5 @@
 {
-  "conventionalCommits.scopes": ["next.js", "home", "maintenance"],
+  "conventionalCommits.scopes": ["next.js", "home", "maintenance", "api"],
   "files.associations": {
     "*.css": "tailwindcss"
   },
