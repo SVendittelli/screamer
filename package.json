@@ -6,6 +6,7 @@
     "analyze": "cross-env ANALYZE=true npm run build",
     "build": "next build",
     "dev": "next dev",
+    "dev:test": "cross-env VERCEL=preview npm run dev",
     "format": "prettier --write .",
     "preinstall": "npx npm-only-allow@latest --PM npm",
     "lint": "next lint",
@@ -13,13 +14,15 @@
     "start": "next start",
     "test": "jest --watch",
     "test:ci": "jest --ci",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "0.7.1",
+    "@vercel/edge-config": "0.4.1",
     "clsx": "2.0.0",
     "next": "14.0.2",
     "react": "18.2.0",

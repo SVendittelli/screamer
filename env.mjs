@@ -12,13 +12,19 @@ export const env = createEnv({
       .string()
       .optional()
       .transform((value) => !!value && value !== "false" && value !== "0"),
+    EDGE_CONFIG: z.string().optional(),
     PORT: z.coerce.number().default(3000),
+    VERCEL_ENV: z
+      .enum(["development", "preview", "production"])
+      .default("development"),
   },
   client: {},
   runtimeEnv: {
     ANALYZE: process.env.ANALYZE,
     BASE_URL: process.env.BASE_URL,
     CI: process.env.CI,
+    EDGE_CONFIG: process.env.EDGE_CONFIG,
+    VERCEL_ENV: process.env.VERCEL_ENV,
     PORT: process.env.PORT,
   },
 });
