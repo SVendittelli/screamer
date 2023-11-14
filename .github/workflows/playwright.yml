@@ -28,11 +28,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           max_timeout: 300
       - name: Run Playwright tests
-        run: npm run test:e2e
+        run: npm run e2e
         env:
           BASE_URL: ${{ steps.waitForDeploy.outputs.url }}
-          EDGE_CONFIG: ${{ secrets.EDGE_CONFIG }}
-          VERCEL_ENV: preview
       - uses: actions/upload-artifact@v3
         if: always()
         with:
