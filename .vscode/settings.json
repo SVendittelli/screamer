@@ -1,7 +1,8 @@
 {
-  "conventionalCommits.scopes": ["next.js", "home", "maintenance", "api"],
+  "conventionalCommits.scopes": ["next.js", "home", "maintenance", "api", "db"],
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "cSpell.words": ["datasources"]
 }
