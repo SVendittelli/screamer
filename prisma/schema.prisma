@@ -12,23 +12,31 @@ datasource db {
 }
 
 model User {
-  id    String  @id @default(uuid())
-  email String  @unique
-  name  String?
-  votes Vote[]
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  email     String   @unique
+  name      String?
+  votes     Vote[]
 }
 
 model Movie {
-  id    String @id @default(uuid())
-  title String
-  votes Vote[]
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String
+  year      Int
+  votes     Vote[]
+
+  @@unique([title, year])
 }
 
 model Vote {
-  id      String @id @default(uuid())
-  title   String
-  voter   User   @relation(fields: [voterId], references: [id])
-  voterId String
-  movie   Movie  @relation(fields: [movieId], references: [id])
-  movieId String
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  voter     User     @relation(fields: [voterId], references: [id])
+  voterId   String
+  movie     Movie    @relation(fields: [movieId], references: [id])
+  movieId   String
 }

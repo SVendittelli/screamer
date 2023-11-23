@@ -1,6 +1,8 @@
 -- CreateTable
 CREATE TABLE "User" (
     "id" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
     "email" TEXT NOT NULL,
     "name" TEXT,
 
@@ -10,7 +12,10 @@ CREATE TABLE "User" (
 -- CreateTable
 CREATE TABLE "Movie" (
     "id" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
     "title" TEXT NOT NULL,
+    "year" INTEGER NOT NULL,
 
     CONSTRAINT "Movie_pkey" PRIMARY KEY ("id")
 );
@@ -18,7 +23,8 @@ CREATE TABLE "Movie" (
 -- CreateTable
 CREATE TABLE "Vote" (
     "id" TEXT NOT NULL,
-    "title" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
     "voterId" TEXT NOT NULL,
     "movieId" TEXT NOT NULL,
 
@@ -27,6 +33,9 @@ CREATE TABLE "Vote" (
 
 -- CreateIndex
 CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Movie_title_year_key" ON "Movie"("title", "year");
 
 -- AddForeignKey
 ALTER TABLE "Vote" ADD CONSTRAINT "Vote_voterId_fkey" FOREIGN KEY ("voterId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
