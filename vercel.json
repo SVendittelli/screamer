@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build && npm run migrate",
+  "regions": ["lhr1"],
+  "redirects": [
+    {
+      "source": "/view-source",
+      "destination": "https://github.com/SVendittelli/screamer"
+    }
+  ]
+}
