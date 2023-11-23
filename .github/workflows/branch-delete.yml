@@ -1,0 +1,30 @@
+name: Delete neon branch
+
+on: delete
+
+jobs:
+  delete-neon-branch:
+    if: github.event.ref_type == 'branch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get neon branch ID
+        id: get_branch_id
+        run: |
+          branch_id=$(curl --silent \
+            "https://console.neon.tech/api/v2/projects/${{ secrets.NEON_PROJECT_ID }}/branches" \
+            --header "Accept: application/json" \
+            --header "Content-Type: application/json" \
+            --header "Authorization: Bearer ${{ secrets.NEON_API_KEY }}" \
+            | jq -r .branches \
+            | jq -c '.[] | select(.name == "'${{ github.event.ref }}'") .id' \
+            | jq -r \
+            ) \
+
+           echo "branch_id=${branch_id}" >> $GITHUB_OUTPUT
+
+      - name: Neon Database Delete Branch
+        uses: neondatabase/delete-branch-action@v3.1.3
+        with:
+          project_id: ${{ secrets.NEON_PROJECT_ID }}
+          branch_id: ${{ steps.get_branch_id.outputs.branch_id }}
+          api_key: ${{ secrets.NEON_API_KEY }}
