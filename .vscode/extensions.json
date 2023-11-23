@@ -5,6 +5,7 @@
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "ms-playwright.playwright",
+    "prisma.prisma",
     "streetsidesoftware.code-spell-checker"
   ]
 }
