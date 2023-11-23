@@ -203,6 +203,7 @@ yarn.lock         text -diff
 browserslist      text
 Makefile          text
 makefile          text
+
 # Fixes syntax highlighting on GitHub to allow comments
 tsconfig.json     linguist-language=JSON-with-Comments
 
@@ -296,3 +297,6 @@ Procfile          text
 
 # Prevents massive diffs from built files
 dist/*            binary
+
+# Schemas
+schema.prisma     text
