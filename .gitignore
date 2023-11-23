@@ -36,6 +36,7 @@ yarn-error.log*
 
 # local env files
 .env
+!prisma/.env
 .env*.local
 
 # vercel
