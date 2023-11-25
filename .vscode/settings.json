@@ -5,7 +5,8 @@
     "maintenance",
     "api",
     "db",
-    "git"
+    "git",
+    "analytics"
   ],
   "files.associations": {
     "*.css": "tailwindcss"
