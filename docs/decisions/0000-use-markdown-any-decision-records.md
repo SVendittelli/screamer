@@ -1,3 +1,10 @@
+---
+status: accepted
+date: 2023-11-26
+parent: Decisions
+nav_order: 0
+---
+
 # Use Markdown Any Decision Records
 
 ## Context and Problem Statement

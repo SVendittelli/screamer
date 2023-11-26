@@ -13,5 +13,5 @@
     "*.css": "tailwindcss"
   },
   "typescript.tsdk": "node_modules\\typescript\\lib",
-  "cSpell.words": ["datasources"]
+  "cSpell.words": ["datasources", "dockerized"]
 }

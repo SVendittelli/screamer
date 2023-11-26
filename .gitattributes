@@ -204,6 +204,7 @@ yarn.lock         text -diff
 browserslist      text
 Makefile          text
 makefile          text
+Gemfile*          text
 
 # Fixes syntax highlighting on GitHub to allow comments
 tsconfig.json     linguist-language=JSON-with-Comments
