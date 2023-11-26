@@ -1,6 +1,8 @@
 ---
 status: accepted
 date: 2023-11-26
+parent: Decisions
+nav_order: 1
 ---
 
 # License the work under MIT

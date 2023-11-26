@@ -1,0 +1,54 @@
+title: Screamer Docs
+description: The original voting app for selecting movies to watch on Halloween
+repository: SVendittelli/screamer
+theme: just-the-docs
+color_scheme: dark
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+  - scope:
+      path: "decisions/*"
+    values:
+      layout: "decision"
+
+exclude:
+  - decisions/adr-template.md
+  - decisions/README.md
+  - .dockerignore
+  - .gitignore
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+
+# Enable site search
+search_enabled: true
+button: true
+
+# Aux links for the upper right navigation
+aux_links:
+  Live Site: https://halloween.vendittelli.co.uk/
+  Code Repository: https://github.com/SVendittelli/screamer/
+aux_links_new_tab: true
+
+# Footer last edited timestamp
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_time_format: "%F" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+# Footer "Edit this page on GitHub" link text
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub."
+gh_edit_repository: "https://github.com/SVendittelli/screamer"
+gh_edit_branch: "main"
+gh_edit_source: "docs"
+gh_edit_view_mode: "edit"
+
+baseurl: ""
+url: https://docs.halloween.vendittelli.co.uk/
+
+plugins:
+  - jekyll-titles-from-headings

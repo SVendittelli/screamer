@@ -1,7 +1,9 @@
 ---
 # These are optional elements. Feel free to remove any of them.
-status: {proposed | rejected | accepted | deprecated | … | superseded by [ADR-0005](0005-example.md)}
-date: {YYYY-MM-DD when the decision was last updated}
+status: { proposed | rejected | accepted | deprecated | superseded }
+date: { YYYY-MM-DD when the decision was last updated }
+parent: Decisions
+nav_order: { NNNN which matches the ADR number }
 ---
 
 # {short title of solved problem and solution}
