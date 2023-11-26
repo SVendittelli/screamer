@@ -1,3 +1,8 @@
+---
+status: accepted
+date: 2023-11-26
+---
+
 # Use Markdown Any Decision Records
 
 ## Context and Problem Statement
