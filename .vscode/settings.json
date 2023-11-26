@@ -6,7 +6,8 @@
     "api",
     "db",
     "git",
-    "analytics"
+    "analytics",
+    "adr"
   ],
   "files.associations": {
     "*.css": "tailwindcss"
