@@ -59,6 +59,7 @@
 
 # Serialisation
 *.json     text
+*.jsonc     text
 *.toml     text
 *.xml      text
 *.yaml     text
