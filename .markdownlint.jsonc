@@ -1,0 +1,78 @@
+// This file defines our configuration for Markdownlint. See
+// https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+// for more details on each rule.
+// Based upon https://github.com/mdn/content/blob/main/.markdownlint.jsonc
+{
+  "default": true,
+
+  // Allow arbitrary line length
+  //
+  // Reason: We apply the one-sentence-per-line rule. A sentence may get longer than 80 characters, especially if links are contained.
+  //
+  // Details: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md013---line-length
+  "MD013": false,
+
+  // Allow duplicate headings
+  //
+  // Reasons:
+  //
+  // - The chosen option of an ADR is considerably often used as title of the ADR. Thus, that title repeats.
+  // - Markdown lint should support the user and not annoy them.
+  //
+  // Details: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md024---multiple-headings-with-the-same-content
+  "MD024": false,
+
+  // https://github.com/OnkarRuikar/markdownlint-rule-search-replace
+  "search-replace": {
+    "rules": [
+      {
+        "name": "curly-double-quotes",
+        "message": "Don't use curly double quotes",
+        "searchPattern": "/“|”/g",
+        "replace": "\"",
+        "searchScope": "text"
+      },
+      {
+        "name": "curly-single-quotes",
+        "message": "Don't use curly single quotes",
+        "searchPattern": "/‘|’/g",
+        "replace": "'",
+        "searchScope": "text"
+      },
+      {
+        "name": "nbsp",
+        "message": "Don't use no-break spaces",
+        "searchPattern": "/ /g",
+        "replace": " ",
+        "searchScope": "all"
+      },
+      {
+        "name": "m-dash",
+        "message": "Don't use '--'. Use m-dash — instead",
+        "search": " -- ",
+        "replace": " — ",
+        "searchScope": "text"
+      },
+      {
+        "name": "trailing-spaces",
+        "message": "Avoid trailing spaces",
+        "searchPattern": "/  +$/gm",
+        "replace": "",
+        "searchScope": "all"
+      },
+      {
+        "name": "double-spaces",
+        "message": "Avoid double spaces",
+        "searchPattern": "/([^\\s>])  ([^\\s|])/g",
+        "replace": "$1 $2",
+        "searchScope": "text"
+      },
+      {
+        "name": "un-closed-md-link",
+        "message": "Missing closing bracket ')'",
+        "searchPattern": "/(\\[[^\\]]*?\\]\\(([^\\)\\n]|\\([^\\)\\n]\\)|\\s[\"'])+?)(\\n|\\s|[,:][\\s\\n])/gm",
+        "searchScope": "text"
+      }
+    ]
+  }
+}
