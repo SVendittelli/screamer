@@ -205,6 +205,7 @@ browserslist      text
 Makefile          text
 makefile          text
 Gemfile*          text
+.ruby-version     text
 
 # Fixes syntax highlighting on GitHub to allow comments
 tsconfig.json     linguist-language=JSON-with-Comments
