@@ -51,4 +51,5 @@ baseurl: ""
 url: https://docs.halloween.vendittelli.co.uk/
 
 plugins:
+  - jekyll-relative-links
   - jekyll-titles-from-headings
