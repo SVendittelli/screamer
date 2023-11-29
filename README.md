@@ -37,8 +37,18 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## License
+
+This work is licensed under [MIT](./LICENSE).
+
+```yaml
+SPDX-License-Identifier: MIT
+```
+
 ## Acknowledgements
 
 Favicons generated with [RealFaviconGenerator](https://realfavicongenerator.net/).
 
 [.gitattributes](./gitattributes) and [check-gitattributes.sh](./check-gitattributes.sh) sourced from [.gitattributes Templates](https://github.com/gitattributes/gitattributes).
+
+Docs site based on [Markdown Any Decision Records](https://github.com/adr/madr).

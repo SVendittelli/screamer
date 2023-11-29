@@ -22,7 +22,6 @@ exclude:
   - Dockerfile
   - Gemfile
   - Gemfile.lock
-  - LICENSE
   - README.md
 
 # Enable site search
