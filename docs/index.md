@@ -14,7 +14,7 @@ Screamer is the an application for submitting and voting on movie to watch as pa
 
 ## License
 
-This work is licensed under [MIT](https://opensource.org/licenses/MIT).
+This work is licensed under [MIT](https://github.com/SVendittelli/screamer/blob/main/LICENSE).
 
 ```yaml
 SPDX-License-Identifier: MIT

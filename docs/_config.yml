@@ -22,7 +22,6 @@ exclude:
   - Dockerfile
   - Gemfile
   - Gemfile.lock
-  - LICENSE
   - README.md
 
 # Enable site search
@@ -51,4 +50,5 @@ baseurl: ""
 url: https://docs.halloween.vendittelli.co.uk/
 
 plugins:
+  - jekyll-relative-links
   - jekyll-titles-from-headings

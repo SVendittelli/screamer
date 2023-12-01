@@ -1,5 +1,4 @@
 ---
-# These are optional elements. Feel free to remove any of them.
 status: { proposed | rejected | accepted | deprecated | superseded }
 date: { YYYY-MM-DD when the decision was last updated }
 parent: Decisions
