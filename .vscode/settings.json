@@ -1,19 +1,29 @@
 {
+  "cSpell.words": [
+    "automerge",
+    "BAFTA",
+    "datasources",
+    "dockerized",
+    "imdb",
+    "Metacritic",
+    "Metascore",
+    "omdb"
+  ],
   "conventionalCommits.scopes": [
-    "next.js",
-    "home",
-    "maintenance",
+    "adr",
+    "analytics",
     "api",
     "db",
-    "git",
-    "analytics",
-    "adr",
+    "demo",
     "deps",
+    "git",
+    "home",
+    "maintenance",
+    "next.js",
     "vercel"
   ],
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "typescript.tsdk": "node_modules\\typescript\\lib",
-  "cSpell.words": ["automerge", "datasources", "dockerized"]
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
