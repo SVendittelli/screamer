@@ -17,3 +17,4 @@ jobs:
       - uses: snaplet/vercel-action@v3.0.1
         with:
           delete: true
+          ignored-build-command: ""
