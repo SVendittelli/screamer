@@ -63,7 +63,7 @@
     "markdownlint-rule-search-replace": "1.2.0",
     "npm-only-allow": "1.2.6",
     "npm-run-all": "4.1.5",
-    "postcss": "8.4.31",
+    "postcss": "8.4.32",
     "prettier": "3.1.0",
     "prettier-plugin-packagejson": "2.4.6",
     "prettier-plugin-prisma": "5.0.0",
