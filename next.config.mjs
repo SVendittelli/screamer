@@ -20,6 +20,10 @@ const nextConfig = withBundleAnalyzer({ enabled: env.ANALYZE })({
             key: "X-Content-Type-Options",
             value: "nosniff",
           },
+          {
+            key: "X-Frame-Options",
+            value: "DENY",
+          },
         ],
       },
     ];
