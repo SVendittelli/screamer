@@ -8,6 +8,11 @@ const nextConfig = withBundleAnalyzer({ enabled: env.ANALYZE })({
         source: "/(.*)",
         headers: [
           {
+            key: "Permissions-Policy",
+            value:
+              "camera=(), display-capture=(), geolocation=(), microphone=()",
+          },
+          {
             key: "Referrer-Policy",
             value: "strict-origin-when-cross-origin",
           },
