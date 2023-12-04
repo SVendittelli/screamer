@@ -4,6 +4,8 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   const currentYear = new Date().getFullYear();
 
