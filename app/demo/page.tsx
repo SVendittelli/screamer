@@ -1,5 +1,7 @@
 import { sampleData } from "./sample-data";
 
+export const dynamic = "force-dynamic";
+
 export default function Demo() {
   return (
     <main className="min-h-screen w-screen p-4 prose prose-neutral bg-gradient-to-b from-red-900 via-red-600 to-red-900">
