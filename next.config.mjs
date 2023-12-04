@@ -24,6 +24,7 @@ const nextConfig = withBundleAnalyzer({ enabled: env.ANALYZE })({
       },
     ];
   },
+  poweredByHeader: false,
   async redirects() {
     return [
       {
