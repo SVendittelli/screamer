@@ -7,11 +7,12 @@
     "db",
     "git",
     "analytics",
-    "adr"
+    "adr",
+    "deps"
   ],
   "files.associations": {
     "*.css": "tailwindcss"
   },
   "typescript.tsdk": "node_modules\\typescript\\lib",
-  "cSpell.words": ["datasources", "dockerized"]
+  "cSpell.words": ["automerge", "datasources", "dockerized"]
 }
