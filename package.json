@@ -47,7 +47,7 @@
     "@types/react-dom": "18.2.17",
     "autoprefixer": "10.4.16",
     "cross-env": "7.0.3",
-    "eslint": "8.54.0",
+    "eslint": "8.55.0",
     "eslint-config-next": "14.0.3",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-import": "2.29.0",
