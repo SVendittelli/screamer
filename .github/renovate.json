@@ -1,5 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>SVendittelli/renovate-config"],
-  "prConcurrentLimit": 4
+  "prConcurrentLimit": 4,
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["devDependencies"],
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "groupName": "devDependencies",
+      "automerge": true
+    }
+  ]
 }
