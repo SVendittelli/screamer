@@ -1,4 +1,4 @@
-name: Preview Environment
+name: Delete Preview Environment Variables
 
 env:
   VERCEL_ACCESS_TOKEN: ${{ secrets.VERCEL_ACCESS_TOKEN }}
@@ -6,18 +6,12 @@ env:
 
 on:
   pull_request:
-    types: [opened, synchronize, closed]
+    types: [closed]
     branches:
       - main
 
 jobs:
-  deploy:
-    if: ${{ github.event.action == 'opened' || github.event.action == 'synchronize' }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: snaplet/vercel-action@v3.0.1
   delete:
-    if: ${{ github.event.action == 'closed' }}
     runs-on: ubuntu-latest
     steps:
       - uses: snaplet/vercel-action@v3.0.1
