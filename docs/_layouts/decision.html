@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% if page.status and page.status != "" and page.status != nil -%}
+<div class="d-flex" style="align-items: center">
+  <div
+    class="label {% case page.status -%} {%- when 'proposed' -%} label-yellow {%- when 'accepted' -%} label-green {%- when 'rejected', 'deprecated', 'superseded' -%} label-red {%- endcase %}"
+  >
+    {{ page.status }}
+  </div>
+  {% if page.date and page.date != "" and page.date != nil %} on {{ page.date |
+  date: site.last_edit_time_format }}{% endif %}
+</div>
+{%- endif %} {{ content }}

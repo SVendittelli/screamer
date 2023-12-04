@@ -6,6 +6,7 @@
     "esbenp.prettier-vscode",
     "ms-playwright.playwright",
     "prisma.prisma",
-    "streetsidesoftware.code-spell-checker"
+    "streetsidesoftware.code-spell-checker",
+    "davidanson.vscode-markdownlint"
   ]
 }

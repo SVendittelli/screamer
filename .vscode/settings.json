@@ -1,20 +1,26 @@
 {
   "cSpell.words": [
+    "automerge",
     "BAFTA",
     "datasources",
+    "dockerized",
     "imdb",
     "Metacritic",
     "Metascore",
     "omdb"
   ],
   "conventionalCommits.scopes": [
+    "adr",
+    "analytics",
     "api",
     "db",
     "demo",
+    "deps",
     "git",
     "home",
     "maintenance",
-    "next.js"
+    "next.js",
+    "vercel"
   ],
   "files.associations": {
     "*.css": "tailwindcss"

@@ -1,3 +1,5 @@
+# Sourced from: https://community.neon.tech/t/delete-vercel-env-vars-when-branch-is-deleted/857/3
+
 name: Delete neon branch
 
 on: delete
@@ -8,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get neon branch ID
-        id: get_branch_id
+        id: get_branch
         run: |
-          branch_id=$(curl --silent \
+          branch=$(curl --silent \
             "https://console.neon.tech/api/v2/projects/${{ secrets.NEON_PROJECT_ID }}/branches" \
             --header "Accept: application/json" \
             --header "Content-Type: application/json" \
@@ -20,11 +22,11 @@ jobs:
             | jq -r \
             ) \
 
-           echo "branch_id=${branch_id}" >> $GITHUB_OUTPUT
+           echo "branch=${branch}" >> $GITHUB_OUTPUT
 
       - name: Neon Database Delete Branch
         uses: neondatabase/delete-branch-action@v3.1.3
         with:
           project_id: ${{ secrets.NEON_PROJECT_ID }}
-          branch: ${{ steps.get_branch_id.outputs.branch_id }}
+          branch: ${{ steps.get_branch.outputs.branch }}
           api_key: ${{ secrets.NEON_API_KEY }}

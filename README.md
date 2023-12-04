@@ -1,44 +1,74 @@
 # 🩸 Screamer
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![license](https://img.shields.io/github/license/SVendittelli/screamer.svg)](LICENSE)
+[![Production deployment](https://img.shields.io/github/deployments/SVendittelli/screamer/production?label=deploy)](https://github.com/SVendittelli/screamer/deployments/activity_log?environment=production)
+[![Documentation deployment](https://img.shields.io/github/deployments/SVendittelli/screamer/github-pages?label=docs-deploy)](https://github.com/SVendittelli/screamer/deployments/activity_log?environment=github-pages)
+[![Website status](https://img.shields.io/website/https/halloween.vendittelli.co.uk)](https://halloween.vendittelli.co.uk/)
+[![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m795811614-7df5f2fde9ddb5b3e00c28e1)](https://stats.uptimerobot.com/80zk0uXpKG/795811614)
+[![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/halloween.vendittelli.co.uk?publish)](https://observatory.mozilla.org/analyze/halloween.vendittelli.co.uk)
+[![Known Vulnerabilities](https://snyk.io/test/github/SVendittelli/screamer/badge.svg)](https://snyk.io/test/github/SVendittelli/screamer)
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-## Getting Started
+The original voting app for selecting movies to watch on Halloween.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [Install](#install)
+  - [Dependencies](#dependencies)
+- [Usage](#usage)
+- [Security](#security)
+- [Maintainer](#maintainer)
+- [Acknowledgements](#acknowledgements)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Install
+
+```terminal
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [node](https://nodejs.org/) >= v18
+- [Vercel CLI](https://vercel.com/docs/cli) (run `vercel login`)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Usage
 
-## Learn More
+```terminal
+vercel env pull .env
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open <http://localhost:3000> with your browser to see the site.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Security
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The project's [security policy](https://github.com/SVendittelli/screamer/security/policy) can be found in the [`SECURITY.md`](./SECURITY.md).
 
-## Deploy on Vercel
+Security issue can be reported via [GitHub](https://github.com/SVendittelli/screamer/security/advisories).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This information is also made available in line with the [proposed standard](https://securitytxt.org/) at [halloween.vendittelli.co.uk/.well-known/security.txt](https://halloween.vendittelli.co.uk/.well-known/security.txt).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Maintainer
+
+[@SVendittelli](https://github.com/SVendittelli).
 
 ## Acknowledgements
 
-Favicons generated with [RealFaviconGenerator](https://realfavicongenerator.net/).
+Favicons generated with the [RealFaviconGenerator](https://realfavicongenerator.net/).
 
-[.gitattributes](./gitattributes) and [check-gitattributes.sh](./check-gitattributes.sh) sourced from [.gitattributes Templates](https://github.com/gitattributes/gitattributes).
+Documentation site based on the site of the [Markdown Any Decision Records](https://github.com/adr/madr).
+
+## Contributing
+
+PRs accepted.
+
+## License
+
+[MIT © Sam Vendittelli.](./LICENSE)
+
+```yaml
+SPDX-License-Identifier: MIT
+```
