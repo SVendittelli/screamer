@@ -1,4 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
+import "dotenv/config";
 import { env } from "./env.mjs";
 
 const PORT = env.PORT;
