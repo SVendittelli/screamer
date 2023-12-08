@@ -32,7 +32,7 @@ export async function middleware(request: NextRequest) {
    */
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const cspHeader = `
-    script-src 'nonce-${nonce}' 'strict-dynamic';
+    script-src 'nonce-${nonce}' 'unsafe-inline' 'strict-dynamic' https: http:;
     object-src 'none';
     base-uri 'none';
     form-action 'self';
@@ -53,11 +53,13 @@ export async function middleware(request: NextRequest) {
 
   const response = await resolveNextResponse(request, requestHeaders);
 
-  // Set the CSP header in the response
-  response.headers.set(
-    "Content-Security-Policy",
-    contentSecurityPolicyHeaderValue,
-  );
+  if (env.VERCEL_ENV !== "development") {
+    // Set the CSP header in the response
+    response.headers.set(
+      "Content-Security-Policy",
+      contentSecurityPolicyHeaderValue,
+    );
+  }
 
   return response;
 }
