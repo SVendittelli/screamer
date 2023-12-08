@@ -32,7 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased bg-red-900`}>
+      <body
+        className={`${inter.className} antialiased bg-gradient-to-b from-red-900 via-red-600 to-red-900`}
+      >
         {children}
         <Analytics />
       </body>

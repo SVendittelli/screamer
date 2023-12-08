@@ -10,7 +10,7 @@ export default function Home() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="min-h-screen w-screen p-4 flex flex-col items-center justify-between bg-gradient-to-b from-red-900 via-red-600 to-red-900">
+    <div className="min-h-screen w-screen p-4 flex flex-col items-center justify-between">
       <header>
         <Link className="flex gap-2 prose prose-neutral prose-invert" href="/">
           <Image
