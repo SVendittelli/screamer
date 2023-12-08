@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: ["main"]
 
+env:
+  SUPERTOKENS_API_KEY: ${{ secrets.SUPERTOKENS_API_KEY }}
+  SUPERTOKENS_CONNECTION_URI: ${{ secrets.SUPERTOKENS_CONNECTION_URI }}
+
 jobs:
   lint-and-build:
     runs-on: ubuntu-latest
@@ -57,8 +61,6 @@ jobs:
         run: npm run e2e
         env:
           BASE_URL: ${{ steps.waitForDeploy.outputs.url }}
-          SUPERTOKENS_API_KEY: ${{ secrets.SUPERTOKENS_API_KEY }}
-          SUPERTOKENS_CONNECTION_URI: ${{ secrets.SUPERTOKENS_CONNECTION_URI }}
       - uses: actions/upload-artifact@v3
         if: always()
         with:
