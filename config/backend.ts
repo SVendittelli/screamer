@@ -1,8 +1,10 @@
 import { appInfo } from "@/config/appInfo";
 import { env } from "@/env.mjs";
 import SuperTokens from "supertokens-node";
+import Dashboard from "supertokens-node/recipe/dashboard";
 import Passwordless from "supertokens-node/recipe/passwordless";
 import Session from "supertokens-node/recipe/session";
+import UserRoles from "supertokens-node/recipe/userroles";
 import { TypeInput } from "supertokens-node/types";
 
 export const backendConfig = (): TypeInput => {
@@ -14,11 +16,13 @@ export const backendConfig = (): TypeInput => {
     },
     appInfo: appInfo(env.VERCEL_URL),
     recipeList: [
+      Dashboard.init({ admins: env.ADMINS }),
       Passwordless.init({
         flowType: "MAGIC_LINK",
         contactMethod: "EMAIL_OR_PHONE",
       }),
-      Session.init(), // initializes session features
+      Session.init(),
+      UserRoles.init(),
     ],
     isInServerlessEnv: true,
   };

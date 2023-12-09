@@ -32,6 +32,11 @@ const nextConfig = withBundleAnalyzer({ enabled: env.ANALYZE })({
   async redirects() {
     return [
       {
+        source: "/docs",
+        destination: "https://svendittelli.github.io/screamer/",
+        permanent: false,
+      },
+      {
         source: "/view-source",
         destination: "https://github.com/SVendittelli/screamer",
         permanent: true,

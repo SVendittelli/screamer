@@ -3,6 +3,10 @@ import { z } from "zod";
 
 export const env = createEnv({
   server: {
+    ADMINS: z.preprocess(
+      (value) => JSON.parse(value) || [],
+      z.array(z.string()),
+    ),
     ANALYZE: z
       .enum(["true", "false"])
       .optional()
@@ -29,6 +33,7 @@ export const env = createEnv({
   },
   client: {},
   runtimeEnv: {
+    ADMINS: process.env.ADMINS,
     ANALYZE: process.env.ANALYZE,
     BASE_URL: process.env.BASE_URL,
     CI: process.env.CI,
