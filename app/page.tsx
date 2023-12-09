@@ -5,7 +5,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBook, FaGithub, FaUserShield } from "react-icons/fa6";
-import UserRoles from "supertokens-node/recipe/userroles";
+import { UserRoleClaim } from "supertokens-node/recipe/userroles";
 
 export const dynamic = "force-dynamic";
 
@@ -14,12 +14,13 @@ export default async function Home() {
   const currentYear = new Date().getFullYear();
 
   const buttons = [["Try demo", "/demo"]];
-  let roles;
+
+  let roles: string[] | undefined;
   if (session) {
     buttons.push(["Vote", "/vote"]);
     buttons.push(["Results", ""]);
 
-    roles = await session.getClaimValue(UserRoles.UserRoleClaim);
+    roles = await session.getClaimValue(UserRoleClaim);
   } else {
     buttons.push(["Log in", "/auth"]);
   }

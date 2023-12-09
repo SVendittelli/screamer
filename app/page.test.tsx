@@ -5,6 +5,7 @@ import Home from "./page";
 jest.mock("@/utils/session", () => ({
   getSSRSession: jest.fn(),
 }));
+jest.mock("supertokens-node/recipe/userroles", () => ({}));
 
 describe("Home", () => {
   beforeEach(() => {
@@ -39,7 +40,9 @@ describe("Home", () => {
 
   describe("when logged in", () => {
     beforeEach(() => {
-      (getSSRSession as jest.Mock).mockResolvedValue({ session: {} });
+      (getSSRSession as jest.Mock).mockResolvedValue({
+        session: { getClaimValue: jest.fn() },
+      });
     });
 
     it("renders three buttons", async () => {
