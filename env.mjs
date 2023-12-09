@@ -4,7 +4,7 @@ import { z } from "zod";
 export const env = createEnv({
   server: {
     ADMINS: z.preprocess(
-      (value) => JSON.parse(value) || [],
+      (value) => (value && JSON.parse(value)) || [],
       z.array(z.string()),
     ),
     ANALYZE: z
