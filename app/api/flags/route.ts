@@ -1,5 +1,5 @@
-import { FeatureFlag } from "@/app/lib/flags";
 import { env } from "@/env.mjs";
+import { FeatureFlag } from "@/lib/flags";
 import { get } from "@vercel/edge-config";
 import { NextResponse } from "next/server";
 

@@ -1,31 +1,72 @@
+import { getSSRSession } from "@/utils/session";
 import { render, screen } from "@testing-library/react";
 import Home from "./page";
 
+jest.mock("@/utils/session", () => ({
+  getSSRSession: jest.fn(),
+}));
+jest.mock("supertokens-node/recipe/userroles", () => ({}));
+
 describe("Home", () => {
-  it("renders page title 'Screamer'", () => {
-    render(<Home />);
+  beforeEach(() => {
+    (getSSRSession as jest.Mock).mockResolvedValue({ session: null });
+  });
+
+  it("renders page title 'Screamer'", async () => {
+    const home = await Home();
+    render(home);
     const messageElement = screen.getByText(/Screamer/);
     expect(messageElement).toBeInTheDocument();
   });
 
-  it("renders three buttons", () => {
-    render(<Home />);
-    const buttons = screen.getAllByRole("button");
-    expect(buttons.length).toEqual(3);
+  describe("when not logged in", () => {
+    it("renders two buttons", async () => {
+      const home = await Home();
+      render(home);
+      const buttons = screen.getAllByRole("button");
+      expect(buttons.length).toEqual(2);
+    });
+
+    it.each([["Try demo"], ["Log in"]])(
+      "renders a '%s' button",
+      async (text) => {
+        const home = await Home();
+        render(home);
+        const button = screen.getByText(text);
+        expect(button).toBeInTheDocument();
+      },
+    );
   });
 
-  it.each([["Try demo"], ["Sign up"], ["Log in"]])(
-    "renders a '%s' button",
-    (text) => {
-      render(<Home />);
-      const button = screen.getByText(text);
-      expect(button).toBeInTheDocument();
-    },
-  );
+  describe("when logged in", () => {
+    beforeEach(() => {
+      (getSSRSession as jest.Mock).mockResolvedValue({
+        session: { getClaimValue: jest.fn() },
+      });
+    });
 
-  it("has a footer containing the current year", () => {
+    it("renders three buttons", async () => {
+      const home = await Home();
+      render(home);
+      const buttons = screen.getAllByRole("button");
+      expect(buttons.length).toEqual(3);
+    });
+
+    it.each([["Try demo"], ["Vote"], ["Results"]])(
+      "renders a '%s' button",
+      async (text) => {
+        const home = await Home();
+        render(home);
+        const button = screen.getByText(text);
+        expect(button).toBeInTheDocument();
+      },
+    );
+  });
+
+  it("has a footer containing the current year", async () => {
     const currentYear = new Date().getFullYear();
-    render(<Home />);
+    const home = await Home();
+    render(home);
     const footer = screen.getByText(new RegExp(currentYear.toString()));
     expect(footer).toBeInTheDocument();
     expect(footer).toBeVisible();

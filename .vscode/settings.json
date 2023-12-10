@@ -7,12 +7,17 @@
     "imdb",
     "Metacritic",
     "Metascore",
-    "omdb"
+    "omdb",
+    "openapi",
+    "Passwordless",
+    "supertokens",
+    "userroles"
   ],
   "conventionalCommits.scopes": [
     "adr",
     "analytics",
     "api",
+    "auth",
     "db",
     "demo",
     "deps",
@@ -20,6 +25,8 @@
     "home",
     "maintenance",
     "next.js",
+    "security",
+    "users",
     "vercel"
   ],
   "files.associations": {

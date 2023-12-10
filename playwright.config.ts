@@ -1,10 +1,9 @@
 import { defineConfig, devices } from "@playwright/test";
+import "dotenv/config";
 import { env } from "./env.mjs";
 
-const PORT = env.PORT;
-
 // Set webServer.url and use.baseURL with the location of the WebServer respecting the correct set port
-const baseURL = env.BASE_URL ?? `http://localhost:${PORT}`;
+const baseURL = env.VERCEL_URL ?? "http://localhost:3000";
 
 /**
  * See https://playwright.dev/docs/test-configuration.

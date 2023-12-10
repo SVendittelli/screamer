@@ -9,6 +9,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/SVendittelli/screamer/badge.svg)](https://snyk.io/test/github/SVendittelli/screamer)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![wakatime](https://wakatime.com/badge/github/SVendittelli/screamer.svg)](https://wakatime.com/badge/github/SVendittelli/screamer)
 
 The original voting app for selecting movies to watch on Halloween.
 

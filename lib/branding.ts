@@ -8,4 +8,4 @@ export const description =
 /**
  * The base URL of the application. This is used for generating absolute URLs
  */
-export const baseUrl = env.BASE_URL ?? "https://halloween.vendittelli.co.uk/";
+export const baseUrl = env.VERCEL_URL;
