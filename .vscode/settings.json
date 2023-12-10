@@ -9,7 +9,8 @@
     "Metascore",
     "omdb",
     "Passwordless",
-    "supertokens"
+    "supertokens",
+    "userroles"
   ],
   "conventionalCommits.scopes": [
     "adr",
@@ -24,6 +25,7 @@
     "maintenance",
     "next.js",
     "security",
+    "users",
     "vercel"
   ],
   "files.associations": {
