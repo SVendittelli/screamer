@@ -60,7 +60,7 @@ jobs:
       - name: Run Playwright tests
         run: npm run e2e
         env:
-          BASE_URL: ${{ steps.waitForDeploy.outputs.url }}
+          VERCEL_URL: ${{ steps.waitForDeploy.outputs.url }}
       - uses: actions/upload-artifact@v3
         if: always()
         with:
