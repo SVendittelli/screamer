@@ -14,7 +14,7 @@ Screamer is the an application for submitting and voting on movie to watch as pa
 
 ## API Specification
 
-The [Screamer API](https://halloween.vendittelli.co.uk/api-spec) is documented with [OpenAPI 3.1](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md) and visualised with [Swagger UI](https://swagger.io/tools/swagger-ui/). See [ADR-0012](./decisions/0012-use-swagger.md).
+The [Screamer API](https://halloween.vendittelli.co.uk/swagger) is documented with [OpenAPI 3.1](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md) and visualised with [Swagger UI](https://swagger.io/tools/swagger-ui/). See [ADR-0012](./decisions/0012-use-swagger.md).
 
 ## License
 

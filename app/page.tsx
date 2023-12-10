@@ -61,7 +61,7 @@ export default async function Home() {
           <Link href="/view-source" title="Source Code" prefetch={false}>
             <FaGithub />
           </Link>
-          <Link href="/api-spec" title="Open API Specification">
+          <Link href="/swagger" title="Open API Specification">
             <SiSwagger />
           </Link>
           {isAdmin && (
