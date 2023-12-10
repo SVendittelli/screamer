@@ -5,5 +5,5 @@ import { env } from "@/env.mjs";
  */
 export const baseUrl =
   env.VERCEL_ENV === "production"
-    ? "https://halloween.vendittelli.co.uk/"
+    ? "https://halloween.vendittelli.co.uk"
     : env.VERCEL_URL;
