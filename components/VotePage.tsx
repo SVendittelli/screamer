@@ -1,4 +1,4 @@
-import { getSSRSession } from "@/utils/session";
+import { getSSRSession } from "@/libs/session";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { FaAngleLeft } from "react-icons/fa6";

@@ -1,5 +1,5 @@
 import { env } from "@/env.mjs";
-import { FeatureFlag } from "@/lib/flags";
+import FeatureFlags from "@/types/FeatureFlags";
 import { get } from "@vercel/edge-config";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -81,7 +81,7 @@ async function resolveNextResponse(request: NextRequest, headers: Headers) {
 
   try {
     // Check whether the maintenance page should be shown
-    const flags = await get<FeatureFlag>(env.VERCEL_ENV);
+    const flags = await get<FeatureFlags>(env.VERCEL_ENV);
 
     // If it is in maintenance mode, point the url pathname to the maintenance page
     if (flags?.maintenance) {

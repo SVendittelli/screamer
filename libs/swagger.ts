@@ -1,6 +1,6 @@
-import packageJson from "@/package.json";
+import { baseUrl } from "@/libs/constants";
+import { version } from "@/libs/constants/version";
 import { createSwaggerSpec } from "next-swagger-doc";
-import { baseUrl } from "./branding";
 
 export const getApiDocs = async () => {
   const spec = createSwaggerSpec({
@@ -11,7 +11,7 @@ export const getApiDocs = async () => {
         title: "🩸 Screamer API",
         summary: "The RESTful API for Screamer.",
         description: `To acquire an access token for the API please visit [/auth](${baseUrl}/auth) endpoint.`,
-        version: packageJson.version,
+        version,
         license: {
           name: "MIT",
           url: `${baseUrl}/license`,

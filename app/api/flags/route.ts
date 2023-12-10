@@ -1,5 +1,5 @@
 import { env } from "@/env.mjs";
-import { FeatureFlag } from "@/lib/flags";
+import FeatureFlags from "@/types/FeatureFlags";
 import { get } from "@vercel/edge-config";
 import { NextResponse } from "next/server";
 
@@ -16,7 +16,7 @@ export async function GET() {
     );
   }
 
-  const flags = await get<FeatureFlag>(env.VERCEL_ENV);
+  const flags = await get<FeatureFlags>(env.VERCEL_ENV);
 
   if (!flags) {
     console.error("Missing feature flag configuration");

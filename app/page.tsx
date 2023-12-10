@@ -1,6 +1,6 @@
-import { creepster } from "@/lib/fonts";
+import { creepster } from "@/libs/fonts";
+import { getSSRSession } from "@/libs/session";
 import whiteLogo from "@/public/logo-white.min.svg";
-import { getSSRSession } from "@/utils/session";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
