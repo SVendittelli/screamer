@@ -2,7 +2,7 @@ import { getSSRSession } from "@/libs/session";
 import { render, screen } from "@testing-library/react";
 import Home from "./page";
 
-jest.mock("@/utils/session", () => ({
+jest.mock("@/libs/session", () => ({
   getSSRSession: jest.fn(),
 }));
 jest.mock("supertokens-node/recipe/userroles", () => ({}));
