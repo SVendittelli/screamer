@@ -1,5 +1,6 @@
 import { appInfo } from "@/config/appInfo";
 import { env } from "@/env.mjs";
+import { baseUrl } from "@/lib/branding";
 import SuperTokens, { User } from "supertokens-node";
 import Dashboard from "supertokens-node/recipe/dashboard";
 import Passwordless, {
@@ -16,7 +17,7 @@ export const backendConfig = (): TypeInput => {
       connectionURI: env.SUPERTOKENS_CONNECTION_URI,
       apiKey: env.SUPERTOKENS_API_KEY,
     },
-    appInfo: appInfo(env.VERCEL_URL),
+    appInfo: appInfo(baseUrl),
     recipeList: [
       Dashboard.init({ admins: env.ADMINS }),
       Passwordless.init({

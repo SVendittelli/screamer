@@ -19,7 +19,6 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "production", "test"])
       .default("development"),
-    PORT: z.coerce.number().default(3000),
     SUPERTOKENS_API_KEY: z.string(),
     SUPERTOKENS_CONNECTION_URI: z.string(),
     VERCEL_ENV: z
@@ -28,7 +27,7 @@ export const env = createEnv({
     VERCEL_URL: z
       .string()
       .optional()
-      .transform((val) => val || "http://localhost:3000"),
+      .transform((val) => (val ? `https://${val}` : "http://localhost:3000")),
   },
   client: {},
   runtimeEnv: {
@@ -37,7 +36,6 @@ export const env = createEnv({
     CI: process.env.CI,
     EDGE_CONFIG: process.env.EDGE_CONFIG,
     NODE_ENV: process.env.NODE_ENV,
-    PORT: process.env.PORT,
     SUPERTOKENS_API_KEY: process.env.SUPERTOKENS_API_KEY,
     SUPERTOKENS_CONNECTION_URI: process.env.SUPERTOKENS_CONNECTION_URI,
     VERCEL_ENV: process.env.VERCEL_ENV,
