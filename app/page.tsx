@@ -55,10 +55,10 @@ export default async function Home() {
       </main>
       <footer className="prose prose-neutral prose-invert font-bold flex flex-col items-center">
         <div className="flex gap-6 text-4xl pb-1">
-          <Link href="/docs" title="Documentation">
+          <Link href="/docs" title="Documentation" prefetch={false}>
             <FaBook />
           </Link>
-          <Link href="/view-source" title="Source Code">
+          <Link href="/view-source" title="Source Code" prefetch={false}>
             <FaGithub />
           </Link>
           <Link href="/api-spec" title="Open API Specification">
