@@ -37,6 +37,12 @@ const nextConfig = withBundleAnalyzer({ enabled: env.ANALYZE })({
         permanent: false,
       },
       {
+        source: "/license",
+        destination:
+          "https://github.com/SVendittelli/screamer/blob/main/LICENSE",
+        permanent: true,
+      },
+      {
         source: "/view-source",
         destination: "https://github.com/SVendittelli/screamer",
         permanent: true,

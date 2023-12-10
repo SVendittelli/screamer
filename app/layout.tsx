@@ -1,7 +1,7 @@
-import { baseUrl, description, title } from "@/app/ui/branding";
-import { inter } from "@/app/ui/fonts";
-import "@/app/ui/globals.css";
 import { SuperTokensProvider } from "@/components/SuperTokensProvider";
+import { baseUrl, description, title } from "@/lib/branding";
+import { inter } from "@/lib/fonts";
+import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 

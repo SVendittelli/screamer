@@ -1,10 +1,11 @@
-import { creepster } from "@/app/ui/fonts";
+import { creepster } from "@/lib/fonts";
 import whiteLogo from "@/public/logo-white.min.svg";
 import { getSSRSession } from "@/utils/session";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBook, FaGithub, FaUserShield } from "react-icons/fa6";
+import { SiSwagger } from "react-icons/si";
 import { UserRoleClaim } from "supertokens-node/recipe/userroles";
 
 export const dynamic = "force-dynamic";
@@ -59,6 +60,9 @@ export default async function Home() {
           </Link>
           <Link href="/view-source" title="Source Code">
             <FaGithub />
+          </Link>
+          <Link href="/api-spec" title="Open API Specification">
+            <SiSwagger />
           </Link>
           {isAdmin && (
             <Link href="/api/auth/dashboard" title="User Dashboard">

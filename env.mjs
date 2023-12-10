@@ -11,7 +11,6 @@ export const env = createEnv({
       .enum(["true", "false"])
       .optional()
       .transform((value) => value === "true"),
-    BASE_URL: z.string().optional(),
     CI: z
       .string()
       .optional()
@@ -35,7 +34,6 @@ export const env = createEnv({
   runtimeEnv: {
     ADMINS: process.env.ADMINS,
     ANALYZE: process.env.ANALYZE,
-    BASE_URL: process.env.BASE_URL,
     CI: process.env.CI,
     EDGE_CONFIG: process.env.EDGE_CONFIG,
     NODE_ENV: process.env.NODE_ENV,

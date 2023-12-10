@@ -22,6 +22,47 @@ const createUserSchema = z.union([
 
 type CreateUser = z.infer<typeof createUserSchema>;
 
+/**
+ * @openapi
+ *
+ * /users:
+ *   post:
+ *     tags:
+ *       - users
+ *     summary: Create a user
+ *     description: |-
+ *       Create a user in SuperTokens and create them a magic link to sign in.
+ *
+ *       The role `admin` is required.
+ *     operationId: createUser
+ *     requestBody:
+ *       description: The user to create.
+ *       content:
+ *         application/json:
+ *           schema:
+ *             oneOf:
+ *               - $ref: '#/components/schemas/CreateUserEmail'
+ *               - $ref: '#/components/schemas/CreateUserPhoneNumber'
+ *           examples:
+ *             email:
+ *               $ref: '#/components/examples/CreateUserEmail'
+ *             phoneNumber:
+ *               $ref: '#/components/examples/CreateUserPhoneNumber'
+ *       required: true
+ *     responses:
+ *       201:
+ *         description: User created
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/CreateUserResponse'
+ *       400:
+ *         description: Bad request
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ */
 export function POST(request: NextRequest) {
   return withSession(
     request,
@@ -64,7 +105,7 @@ export function POST(request: NextRequest) {
         });
       }
 
-      return NextResponse.json({ inviteLink });
+      return NextResponse.json({ inviteLink }, { status: 201 });
     },
     {
       overrideGlobalClaimValidators: async (globalValidators) => [
