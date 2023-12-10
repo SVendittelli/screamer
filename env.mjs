@@ -24,6 +24,10 @@ export const env = createEnv({
     VERCEL_ENV: z
       .enum(["development", "preview", "production"])
       .default("development"),
+    VERCEL_GIT_COMMIT_SHA: z
+      .string()
+      .optional()
+      .transform((sha) => sha || "local"),
     VERCEL_URL: z
       .string()
       .optional()
@@ -45,6 +49,7 @@ export const env = createEnv({
     SUPERTOKENS_API_KEY: process.env.SUPERTOKENS_API_KEY,
     SUPERTOKENS_CONNECTION_URI: process.env.SUPERTOKENS_CONNECTION_URI,
     VERCEL_ENV: process.env.VERCEL_ENV,
+    VERCEL_GIT_COMMIT_SHA: process.env.VERCEL_GIT_COMMIT_SHA,
     VERCEL_URL: process.env.VERCEL_URL,
   },
 });

@@ -1,6 +1,6 @@
 import { appInfo } from "@/config/appInfo";
 import { env } from "@/env.mjs";
-import { baseUrl } from "@/lib/branding";
+import { baseUrl } from "@/libs/constants";
 import SuperTokens, { User } from "supertokens-node";
 import Dashboard from "supertokens-node/recipe/dashboard";
 import Passwordless, {

@@ -1,4 +1,4 @@
-import { getSSRSession } from "@/utils/session";
+import { getSSRSession } from "@/libs/session";
 import { render, screen } from "@testing-library/react";
 import Home from "./page";
 

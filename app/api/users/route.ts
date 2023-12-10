@@ -1,4 +1,4 @@
-import { withSession } from "@/utils/session";
+import { withSession } from "@/libs/session";
 import { NextRequest, NextResponse } from "next/server";
 import Passwordless from "supertokens-node/recipe/passwordless";
 import UserRoles from "supertokens-node/recipe/userroles";

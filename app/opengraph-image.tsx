@@ -1,4 +1,4 @@
-import { description, title } from "@/lib/branding";
+import { description, title } from "@/libs/constants/branding";
 import { ImageResponse } from "next/og";
 
 // Route segment config

@@ -1,6 +1,8 @@
 import { SuperTokensProvider } from "@/components/SuperTokensProvider";
-import { baseUrl, description, title } from "@/lib/branding";
-import { inter } from "@/lib/fonts";
+import { baseUrl } from "@/libs/constants";
+import { description, title } from "@/libs/constants/branding";
+import { sha, version } from "@/libs/constants/version";
+import { inter } from "@/libs/fonts";
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
@@ -23,6 +25,10 @@ export const metadata: Metadata = {
     title,
     description,
     card: "summary_large_image",
+  },
+  other: {
+    version,
+    sha,
   },
 };
 
