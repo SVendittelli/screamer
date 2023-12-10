@@ -26,10 +26,13 @@ export const env = createEnv({
       .default("development"),
     VERCEL_URL: z
       .string()
-      .default("http://localhost:3000")
-      .transform((val) => {
+      .optional()
+      .transform((url) => {
+        if (!url) {
+          return "http://localhost:3000";
+        }
         // Ensure that the URL starts with https:// or http://
-        return val.match(/^https?:\/\//) ? val : `https://${val}`;
+        return url.match(/^https?:\/\//) ? url : `https://${url}`;
       }),
   },
   client: {},
