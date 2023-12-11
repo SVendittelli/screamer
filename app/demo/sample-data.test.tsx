@@ -10,14 +10,14 @@ describe("sampleData", () => {
       expect(movie.title).toBeDefined();
       expect(movie.year).toBeDefined();
       expect(movie.year).toBeGreaterThan(1890);
-      expect(movie.year).toBeLessThan(2022);
+      expect(movie.year).toBeLessThan(2024);
     });
   });
 
   it("contains only movies with posters", () => {
     sampleData.forEach((movie) => {
       expect(movie.poster).toBeDefined();
-      expect(movie.poster).toMatch(/https?:\/\//);
+      expect(movie.poster).toMatch(/^https?:\/\/m.media-amazon.com/);
     });
   });
 
@@ -30,7 +30,7 @@ describe("sampleData", () => {
   it("contains only movies with an MPAA rating", () => {
     sampleData.forEach((movie) => {
       expect(movie.rated).toBeDefined();
-      expect(movie.rated).toMatch(/G|PG|PG-13|R|NC-17|NR/);
+      expect(movie.rated).toMatch(/U|PG|12A?|15|R?18/);
     });
   });
 
