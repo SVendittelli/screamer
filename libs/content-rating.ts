@@ -1,5 +1,5 @@
 export type USRating = "G" | "PG" | "PG-13" | "R" | "NC-17";
-export type UKRating = "U" | "PG" | "12A" | "15" | "18";
+export type UKRating = "U" | "PG" | "12" | "12A" | "15" | "18" | "R18";
 
 /**
  * Convert American film rating to UK film rating.

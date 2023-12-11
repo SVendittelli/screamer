@@ -35,7 +35,7 @@ type OMDbMovie = {
 
 type OMDbError = { Response: string; Error: string };
 
-type Rating = {
+export type Rating = {
   source: "Internet Movie Database" | "Metacritic" | "Rotten Tomatoes";
   value: string;
   score: number;
