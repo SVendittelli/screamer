@@ -1,9 +1,16 @@
+import {
+  UKRating,
+  USRating,
+  convertContentRating,
+} from "@/libs/content-rating";
+import { Runtime } from "@/libs/runtime";
+
 type OMDbMovie = {
   Title: string;
   Year: string;
-  Rated: string;
+  Rated: USRating;
   Released: string;
-  Runtime: string;
+  Runtime: Runtime;
   Genre: string;
   Director: string;
   Writer: string;
@@ -39,8 +46,8 @@ type Movie = {
   year: number;
   poster: string;
   plot: string;
-  rated: string;
-  runtime: string;
+  rated: UKRating;
+  runtime: Runtime;
   genre: string;
   director: string;
   writer: string;
@@ -53,7 +60,7 @@ type Movie = {
   boxOffice: string;
 };
 
-export const sampleData: Movie[] = [
+const omdbMovies: Partial<OMDbMovie>[] = [
   {
     Title: "Alien",
     Year: "1979",
@@ -284,20 +291,22 @@ export const sampleData: Movie[] = [
     imdbID: "tt0365748",
     BoxOffice: "$13,542,874",
   },
-].map((omdbMovie) => ({
-  title: omdbMovie.Title,
-  year: parseInt(omdbMovie.Year),
-  poster: omdbMovie.Poster,
-  plot: omdbMovie.Plot,
-  rated: omdbMovie.Rated,
-  runtime: omdbMovie.Runtime,
-  genre: omdbMovie.Genre,
-  director: omdbMovie.Director,
-  writer: omdbMovie.Writer,
-  actors: omdbMovie.Actors,
-  language: omdbMovie.Language,
-  awards: omdbMovie.Awards,
-  ratings: omdbMovie.Ratings.map(
+];
+
+export const sampleData: Movie[] = omdbMovies.map((omdbMovie) => ({
+  title: omdbMovie.Title!,
+  year: parseInt(omdbMovie.Year!),
+  poster: omdbMovie.Poster!,
+  plot: omdbMovie.Plot!,
+  rated: convertContentRating(omdbMovie.Rated!),
+  runtime: omdbMovie.Runtime!,
+  genre: omdbMovie.Genre!,
+  director: omdbMovie.Director!,
+  writer: omdbMovie.Writer!,
+  actors: omdbMovie.Actors!,
+  language: omdbMovie.Language!,
+  awards: omdbMovie.Awards!,
+  ratings: omdbMovie.Ratings!.map(
     (rating) =>
       ({
         source: rating.Source,
@@ -305,7 +314,7 @@ export const sampleData: Movie[] = [
         score: parseFloat(rating.Value.split(/%|\//)[0]),
       }) as Rating,
   ),
-  imdbVotes: omdbMovie.imdbVotes,
-  imdbID: omdbMovie.imdbID,
-  boxOffice: omdbMovie.BoxOffice,
+  imdbVotes: omdbMovie.imdbVotes!,
+  imdbID: omdbMovie.imdbID!,
+  boxOffice: omdbMovie.BoxOffice!,
 }));
