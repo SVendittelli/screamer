@@ -32,7 +32,7 @@ npm install
 
 ### Dependencies
 
-- [node](https://nodejs.org/) >= v18
+- [node](https://nodejs.org/) - 20.x
 - [Vercel CLI](https://vercel.com/docs/cli) (run `vercel login`)
 
 ## Usage
