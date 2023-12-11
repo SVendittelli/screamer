@@ -28,6 +28,9 @@ const nextConfig = withBundleAnalyzer({ enabled: env.ANALYZE })({
       },
     ];
   },
+  images: {
+    remotePatterns: [{ protocol: "https", hostname: "m.media-amazon.com" }],
+  },
   poweredByHeader: false,
   async redirects() {
     return [
