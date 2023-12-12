@@ -2,6 +2,10 @@ name: "Chromatic Publish"
 
 on: push
 
+env:
+  SUPERTOKENS_API_KEY: ${{ secrets.SUPERTOKENS_API_KEY }}
+  SUPERTOKENS_CONNECTION_URI: ${{ secrets.SUPERTOKENS_CONNECTION_URI }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
