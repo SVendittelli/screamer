@@ -1,10 +1,10 @@
 "use client";
 
-import Logo from "@/components/Logo";
-import { convertRuntime } from "@/libs/runtime";
 import Image from "next/image";
 import { FC, useState } from "react";
-import { Rating, sampleData } from "./sample-data";
+import Logo from "@/components/Logo";
+import { convertRuntime } from "@/libs/runtime";
+import { type Rating, sampleData } from "./sample-data";
 
 export const dynamic = "force-dynamic";
 
@@ -12,7 +12,7 @@ type Props = {
   rating: Rating;
 };
 
-const Rating: FC<Props> = ({ rating }) => {
+const RatingComponent: FC<Props> = ({ rating }) => {
   const title =
     rating.source === "Internet Movie Database" ? "IMDb" : rating.source;
 
@@ -39,25 +39,25 @@ export default function Demo() {
       <header className="flex gap-6 pb-2">
         <Logo />
         <button
-          className="text-white bg-neutral-950 enabled:hover:bg-neutral-700 disabled:opacity-75 no-underline font-bold py-2 px-4 rounded-full"
+          className="rounded-full bg-neutral-950 px-4 py-2 font-bold text-white no-underline enabled:hover:bg-neutral-700 disabled:opacity-75"
           onClick={prev}
         >
           Prev
         </button>
         <button
-          className="text-white bg-neutral-950 enabled:hover:bg-neutral-700 disabled:opacity-75 no-underline font-bold py-2 px-4 rounded-full"
+          className="rounded-full bg-neutral-950 px-4 py-2 font-bold text-white no-underline enabled:hover:bg-neutral-700 disabled:opacity-75"
           onClick={next}
         >
           Next
         </button>
       </header>
       <main>
-        <div id="poster" className="relative w-full aspect-poster max-w-md">
+        <div id="poster" className="relative aspect-poster w-full max-w-md">
           <Image src={movie.poster} alt={``} fill className="object-contain" />
         </div>
-        <article className="prose prose-invert prose-neutral flex flex-col gap-2">
+        <article className="prose prose-neutral prose-invert flex flex-col gap-2">
           <div id="details">
-            <h1 className="mt-2 mb-0">
+            <h1 className="mb-0 mt-2">
               {movie.title} ({movie.year})
             </h1>
             <div className="flex gap-2 align-baseline">
@@ -68,7 +68,7 @@ export default function Demo() {
                 height={32}
                 alt={`${movie.rated} rating`}
               />
-              <div className="font-bold text-2xl text-white">
+              <div className="text-2xl font-bold text-white">
                 {convertRuntime(movie.runtime)}
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function Demo() {
           <div id="awards">{movie.awards}</div>
           <div id="ratings" className="flex justify-between gap-2">
             {movie.ratings.map((rating) => (
-              <Rating key={rating.source} rating={rating} />
+              <RatingComponent key={rating.source} rating={rating} />
             ))}
           </div>
           <div id="moreDetails">

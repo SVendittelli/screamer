@@ -1,5 +1,5 @@
-import { env } from "@/env.mjs";
 import { PrismaClient } from "@prisma/client";
+import { env } from "@/env.mjs";
 
 const prismaClientSingleton = () => {
   return new PrismaClient();

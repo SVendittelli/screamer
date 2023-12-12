@@ -1,12 +1,12 @@
-import { creepster } from "@/libs/fonts";
-import whiteLogo from "@/public/logo-white.min.svg";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
+import { creepster } from "@/libs/fonts";
+import whiteLogo from "@/public/logo-white.min.svg";
 
 function Logo() {
   return (
-    <Link className="flex gap-2 prose prose-neutral prose-invert" href="/">
+    <Link className="prose prose-neutral prose-invert flex gap-2" href="/">
       <Image
         className="not-prose"
         src={whiteLogo}

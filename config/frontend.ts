@@ -1,8 +1,8 @@
-import { appInfo } from "@/config/appInfo";
 import { useRouter } from "next/navigation";
 import { SuperTokensConfig } from "supertokens-auth-react/lib/build/types";
 import Passwordless from "supertokens-auth-react/recipe/passwordless";
 import Session from "supertokens-auth-react/recipe/session";
+import { appInfo } from "@/config/appInfo";
 
 const routerInfo: { router?: ReturnType<typeof useRouter>; pathName?: string } =
   {};

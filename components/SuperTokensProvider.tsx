@@ -1,9 +1,9 @@
 "use client";
 
-import { frontendConfig, setRouter } from "@/config/frontend";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import SuperTokensReact, { SuperTokensWrapper } from "supertokens-auth-react";
+import { frontendConfig, setRouter } from "@/config/frontend";
 
 if (typeof window !== "undefined") {
   // we only want to call this init function on the frontend, so we check typeof window !== 'undefined'

@@ -1,5 +1,5 @@
-import { getApiDocs } from "@/libs/swagger";
 import { NextRequest, NextResponse } from "next/server";
+import { getApiDocs } from "@/libs/swagger";
 
 export async function GET(_request: NextRequest) {
   const spec = await getApiDocs();

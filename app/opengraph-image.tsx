@@ -1,5 +1,5 @@
-import { description, title } from "@/libs/constants/branding";
 import { ImageResponse } from "next/og";
+import { description, title } from "@/libs/constants/branding";
 
 // Route segment config
 export const runtime = "edge";

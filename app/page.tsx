@@ -1,13 +1,9 @@
-import Logo from "@/components/Logo";
-import { creepster } from "@/libs/fonts";
-import { getSSRSession } from "@/libs/session";
-import whiteLogo from "@/public/logo-white.min.svg";
-import clsx from "clsx";
-import Image from "next/image";
 import Link from "next/link";
 import { FaBook, FaGithub, FaUserShield } from "react-icons/fa6";
 import { SiSwagger } from "react-icons/si";
 import { UserRoleClaim } from "supertokens-node/recipe/userroles";
+import Logo from "@/components/Logo";
+import { getSSRSession } from "@/libs/session";
 
 export const dynamic = "force-dynamic";
 
@@ -30,15 +26,15 @@ export default async function Home() {
   const isAdmin = roles?.includes("admin") ?? false;
 
   return (
-    <div className="min-h-screen w-screen p-4 flex flex-col items-center justify-between">
+    <div className="flex min-h-screen w-screen flex-col items-center justify-between p-4">
       <header>
         <Logo />
       </header>
-      <main className="flex flex-col gap-2 prose prose-neutral prose-invert">
+      <main className="prose prose-neutral prose-invert flex flex-col gap-2">
         {buttons.map(([text, href]) => (
           <Link key={text} href={href}>
             <button
-              className="bg-neutral-950 enabled:hover:bg-neutral-700 disabled:opacity-75 no-underline font-bold py-2 px-4 rounded-full w-full"
+              className="w-full rounded-full bg-neutral-950 px-4 py-2 font-bold no-underline enabled:hover:bg-neutral-700 disabled:opacity-75"
               disabled={href === ""}
             >
               {text}
@@ -46,8 +42,8 @@ export default async function Home() {
           </Link>
         ))}
       </main>
-      <footer className="prose prose-neutral prose-invert font-bold flex flex-col items-center">
-        <div className="flex gap-6 text-4xl pb-1">
+      <footer className="prose prose-neutral prose-invert flex flex-col items-center font-bold">
+        <div className="flex gap-6 pb-1 text-4xl">
           <Link href="/docs" title="Documentation" prefetch={false}>
             <FaBook />
           </Link>

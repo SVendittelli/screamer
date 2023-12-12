@@ -1,7 +1,7 @@
 import {
+  convertContentRating,
   UKRating,
   USRating,
-  convertContentRating,
 } from "@/libs/content-rating";
 import { Runtime } from "@/libs/runtime";
 
@@ -33,7 +33,7 @@ type OMDbMovie = {
   Response: string;
 };
 
-type OMDbError = { Response: string; Error: string };
+type _OMDbError = { Response: string; Error: string };
 
 export type Rating = {
   source: "Internet Movie Database" | "Metacritic" | "Rotten Tomatoes";
