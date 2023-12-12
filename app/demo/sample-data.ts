@@ -311,7 +311,7 @@ export const sampleData: Movie[] = omdbMovies.map((omdbMovie) => ({
       ({
         source: rating.Source,
         value: rating.Value,
-        score: parseFloat(rating.Value.split(/%|\//)[0]),
+        score: parseFloat(rating.Value.split(/%|\//)[0]!),
       }) as Rating,
   ),
   imdbVotes: omdbMovie.imdbVotes!,

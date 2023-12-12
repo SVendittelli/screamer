@@ -1,5 +1,3 @@
-"use client";
-
 import ReactSwagger from "@/components/ReactSwagger";
 
 export const dynamic = "force-dynamic";

@@ -11,7 +11,7 @@ export default async function Home() {
   const { session } = await getSSRSession();
   const currentYear = new Date().getFullYear();
 
-  const buttons = [["Try demo", "/demo"]];
+  const buttons: [string, string][] = [["Try demo", "/demo"]];
 
   let roles: string[] | undefined;
   if (session) {
