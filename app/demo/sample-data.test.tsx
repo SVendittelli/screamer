@@ -77,6 +77,7 @@ describe("sampleData", () => {
         );
         expect(rating.value).toBeDefined();
         expect(rating.score).toBeDefined();
+        /* eslint-disable jest/no-conditional-expect */
         if (rating.source === "Internet Movie Database") {
           expect(rating.score).toBeGreaterThanOrEqual(1);
           expect(rating.score).toBeLessThan(10);
@@ -87,6 +88,7 @@ describe("sampleData", () => {
           expect(rating.score).toBeLessThan(100);
           expect(Number.isInteger(rating.score)).toEqual(true);
         }
+        /* eslint-enable jest/no-conditional-expect */
       });
     });
   });

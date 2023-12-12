@@ -1,13 +1,16 @@
 {
   "cSpell.words": [
+    "autodocs",
     "automerge",
     "BAFTA",
     "datasources",
+    "Docgen",
     "dockerized",
     "imdb",
     "Metacritic",
     "Metascore",
     "MPAA",
+    "nextjs",
     "omdb",
     "openapi",
     "Passwordless",
@@ -27,11 +30,28 @@
     "maintenance",
     "next.js",
     "security",
+    "storybook",
     "users",
     "vercel"
   ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
   "files.associations": {
     "*.css": "tailwindcss"
   },
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "cva(?:<[^>]*>)?(([^)]*))",
+      "[\"'`]([^\"'`]*).*?[\"'`]",
+      "(?:twMerge|twJoin)\\(([^\\);]*)[\\);]"
+    ]
+  ],
   "typescript.tsdk": "node_modules\\typescript\\lib"
 }

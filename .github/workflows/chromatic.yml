@@ -1,0 +1,27 @@
+name: "Chromatic Publish"
+
+on: push
+
+env:
+  SUPERTOKENS_API_KEY: ${{ secrets.SUPERTOKENS_API_KEY }}
+  SUPERTOKENS_CONNECTION_URI: ${{ secrets.SUPERTOKENS_CONNECTION_URI }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: "package.json"
+          cache: "npm"
+      - run: npm ci
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

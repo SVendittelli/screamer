@@ -1,7 +1,7 @@
-import { env } from "@/env.mjs";
-import FeatureFlags from "@/types/FeatureFlags";
 import { get } from "@vercel/edge-config";
 import { NextResponse } from "next/server";
+import { env } from "@/env.mjs";
+import FeatureFlags from "@/types/FeatureFlags";
 
 export const runtime = "edge";
 

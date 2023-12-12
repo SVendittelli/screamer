@@ -1,25 +1,18 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Created by https://www.toptal.com/developers/gitignore/api/nextjs,storybookjs,node
+# Edit at https://www.toptal.com/developers/gitignore?templates=nextjs,storybookjs,node
 
+### NextJS ###
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
 
 # testing
 /coverage
 
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-
 # next.js
 /.next/
 /out/
-
-# vercel
-.vercel
 
 # production
 /build
@@ -35,8 +28,6 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
-.env
-!prisma/.env
 .env*.local
 
 # vercel
@@ -46,4 +37,28 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+### StorybookJs ###
+# gitignore template for the Storybook, UI guide for front apps
+# website: https://storybook.js.org/
+
+storybook-static/
+
+# End of https://www.toptal.com/developers/gitignore/api/nextjs,storybookjs
+
+### Custom ###
+# Logs
+logs
+*.log
+
+# local env files
+.env
+!prisma/.env
+
+# npm-only-allow
 /.npm-only-allow
+
+# playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

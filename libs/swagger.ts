@@ -1,6 +1,6 @@
+import { createSwaggerSpec } from "next-swagger-doc";
 import { baseUrl } from "@/libs/constants";
 import { version } from "@/libs/constants/version";
-import { createSwaggerSpec } from "next-swagger-doc";
 
 export const getApiDocs = async () => {
   const spec = createSwaggerSpec({

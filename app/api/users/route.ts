@@ -1,10 +1,10 @@
-import { withSession } from "@/libs/session";
 import { NextRequest, NextResponse } from "next/server";
 import Passwordless from "supertokens-node/recipe/passwordless";
 import UserRoles from "supertokens-node/recipe/userroles";
 import isMobilePhone from "validator/es/lib/isMobilePhone";
 import { z } from "zod";
 import { fromZodError } from "zod-validation-error";
+import { withSession } from "@/libs/session";
 
 const createUserSchema = z.union([
   z.object({

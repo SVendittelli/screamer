@@ -1,5 +1,5 @@
-import { withSession } from "@/libs/session";
 import { NextRequest, NextResponse } from "next/server";
+import { withSession } from "@/libs/session";
 
 /**
  * Get the session information about the current user.

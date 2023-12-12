@@ -1,5 +1,5 @@
-import { getSSRSession } from "@/libs/session";
 import { render, screen } from "@testing-library/react";
+import { getSSRSession } from "@/libs/session";
 import Home from "./page";
 
 jest.mock("@/libs/session", () => ({

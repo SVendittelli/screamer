@@ -1,6 +1,3 @@
-import { appInfo } from "@/config/appInfo";
-import { env } from "@/env.mjs";
-import { baseUrl } from "@/libs/constants";
 import SuperTokens, { User } from "supertokens-node";
 import Dashboard from "supertokens-node/recipe/dashboard";
 import Passwordless, {
@@ -9,6 +6,9 @@ import Passwordless, {
 import Session from "supertokens-node/recipe/session";
 import UserRoles from "supertokens-node/recipe/userroles";
 import { TypeInput } from "supertokens-node/types";
+import { appInfo } from "@/config/appInfo";
+import { env } from "@/env.mjs";
+import { baseUrl } from "@/libs/constants";
 
 export const backendConfig = (): TypeInput => {
   return {

@@ -1,4 +1,3 @@
-import { ensureSuperTokensInit } from "@/config/backend";
 import { serialize } from "cookie";
 import { cookies, headers } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
@@ -11,6 +10,7 @@ import Session, {
   VerifySessionOptions,
 } from "supertokens-node/recipe/session";
 import { HTTPMethod } from "supertokens-node/types";
+import { ensureSuperTokensInit } from "@/config/backend";
 
 ensureSuperTokensInit();
 

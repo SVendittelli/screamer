@@ -6,6 +6,8 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // Toggle dark-mode based on .dark class or data-mode="dark"
+  darkMode: "class",
   theme: {
     extend: {
       aspectRatio: {

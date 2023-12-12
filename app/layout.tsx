@@ -1,11 +1,11 @@
+import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
 import { SuperTokensProvider } from "@/components/SuperTokensProvider";
 import { baseUrl } from "@/libs/constants";
 import { description, title } from "@/libs/constants/branding";
 import { sha, version } from "@/libs/constants/version";
 import { inter } from "@/libs/fonts";
 import "@/styles/globals.css";
-import { Analytics } from "@vercel/analytics/react";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="en">
       <SuperTokensProvider>
         <body
-          className={`${inter.className} antialiased min-h-screen w-screen bg-gradient-to-b from-red-900 via-red-600 to-red-900`}
+          className={`${inter.className} dark min-h-screen w-screen bg-gradient-to-b from-red-900 via-red-600 to-red-900 antialiased`}
         >
           {children}
           <Analytics />
