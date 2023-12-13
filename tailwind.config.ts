@@ -6,9 +6,14 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  // Toggle dark-mode based on .dark class or data-mode="dark"
+  // Toggle dark-mode based on .dark class
   darkMode: "class",
   theme: {
+    screens: {
+      tablet: "768px", // old: md
+      laptop: "1280px", // old: xl
+      desktop: "1536px", // old: 2xl
+    },
     extend: {
       aspectRatio: {
         poster: "2 / 3",
