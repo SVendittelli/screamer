@@ -1,0 +1,12 @@
+:root {
+  --sb-dark-background-color: #333333;
+  --sb-light-background-color: #f8f8f8;
+}
+
+html {
+  background-color: var(--sb-light-background-color);
+}
+
+html.dark {
+  background-color: var(--sb-dark-background-color);
+}

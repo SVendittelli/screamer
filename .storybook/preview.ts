@@ -3,14 +3,12 @@ import type { Preview, ReactRenderer } from "@storybook/react";
 import { themeModes } from "./modes";
 import theme from "./theme";
 
+import "./preview.css";
 import "../styles/globals.css";
 
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
-    backgrounds: {
-      default: "dark",
-    },
     controls: {
       matchers: {
         color: /(background|color)$/i,

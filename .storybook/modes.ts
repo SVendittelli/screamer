@@ -1,10 +1,8 @@
 export const themeModes = {
   dark: {
-    backgrounds: { value: "#333333" },
     theme: "dark",
   },
   light: {
-    backgrounds: { value: "#f8f8f8" },
     theme: "light",
   },
 };
