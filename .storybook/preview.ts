@@ -3,8 +3,8 @@ import type { Preview, ReactRenderer } from "@storybook/react";
 import { themeModes } from "./modes";
 import theme from "./theme";
 
-import "./preview.css";
 import "../styles/globals.css";
+import "./preview.css";
 
 const preview: Preview = {
   parameters: {
