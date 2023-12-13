@@ -9,6 +9,11 @@ const config: Config = {
   // Toggle dark-mode based on .dark class or data-mode="dark"
   darkMode: "class",
   theme: {
+    screens: {
+      tablet: "768px", // old: md
+      laptop: "1280px", // old: xl
+      desktop: "1536px", // old: 2xl
+    },
     extend: {
       aspectRatio: {
         poster: "2 / 3",
