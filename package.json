@@ -42,7 +42,7 @@
     "supertokens-auth-react": "0.36.0",
     "supertokens-node": "16.6.5",
     "supertokens-web-js": "0.8.0",
-    "swagger-ui-react": "5.10.3",
+    "swagger-ui-react": "5.10.5",
     "tailwind-merge": "2.1.0",
     "validator": "13.11.0",
     "zod": "3.22.4",
