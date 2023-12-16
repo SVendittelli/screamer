@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FaBook, FaGithub, FaUserShield } from "react-icons/fa6";
 import { SiSwagger } from "react-icons/si";
 import { UserRoleClaim } from "supertokens-node/recipe/userroles";
+import Button from "@/components/Button";
 import Logo from "@/components/Logo";
 import { getSSRSession } from "@/libs/session";
 
@@ -32,14 +33,9 @@ export default async function Home() {
       </header>
       <main className="prose prose-neutral prose-invert flex flex-col gap-2">
         {buttons.map(([text, href]) => (
-          <Link key={text} href={href}>
-            <button
-              className="w-full rounded-full bg-neutral-950 px-4 py-2 font-bold no-underline enabled:hover:bg-neutral-700 disabled:opacity-75"
-              disabled={href === ""}
-            >
-              {text}
-            </button>
-          </Link>
+          <Button key={text} href={href} disabled={href === ""}>
+            {text}
+          </Button>
         ))}
       </main>
       <footer className="prose prose-neutral prose-invert flex flex-col items-center font-bold">

@@ -16,7 +16,7 @@ function LogoSvg({ height, width, className }: Props) {
     >
       <path
         className="fill-black dark:fill-white"
-        stroke-width="0"
+        strokeWidth="0"
         d="M150 30
            Q165 68 250 180
            A128 128 0 1 1 50 180

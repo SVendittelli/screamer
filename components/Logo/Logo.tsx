@@ -6,13 +6,13 @@ import { twMerge } from "tailwind-merge";
 import { creepster } from "@/libs/fonts";
 import LogoSvg from "./LogoSvg";
 
-const logo = cva([
-  "prose",
-  "prose-neutral",
-  "dark:prose-invert",
-  "flex",
-  "gap-2",
-]);
+const logo = cva(
+  ["prose", "prose-neutral", "dark:prose-invert", "flex", "gap-2"],
+  {
+    variants: {},
+    defaultVariants: {},
+  },
+);
 
 type LinkProps = Omit<Parameters<typeof Link>[0], "href">;
 
