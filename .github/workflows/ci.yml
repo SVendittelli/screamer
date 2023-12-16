@@ -69,7 +69,7 @@ jobs:
         run: npm run e2e
         env:
           VERCEL_URL: ${{ steps.waitForDeploy.outputs.url }}
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: playwright-report
