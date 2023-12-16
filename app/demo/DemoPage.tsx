@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { FC, useState } from "react";
+import Button from "@/components/Button";
 import Logo from "@/components/Logo";
 import { convertRuntime } from "@/libs/runtime";
 import { type Rating, sampleData } from "./sample-data";
@@ -36,18 +37,8 @@ export default function DemoPage() {
     <div className="min-h-screen w-screen p-4">
       <header className="flex gap-6 pb-2">
         <Logo />
-        <button
-          className="rounded-full bg-neutral-950 px-4 py-2 font-bold text-white no-underline enabled:hover:bg-neutral-700 disabled:opacity-75"
-          onClick={prev}
-        >
-          Prev
-        </button>
-        <button
-          className="rounded-full bg-neutral-950 px-4 py-2 font-bold text-white no-underline enabled:hover:bg-neutral-700 disabled:opacity-75"
-          onClick={next}
-        >
-          Next
-        </button>
+        <Button onClick={prev}>Prev</Button>
+        <Button onClick={next}>Next</Button>
       </header>
       <main>
         <div id="poster" className="relative aspect-poster w-full max-w-md">

@@ -1,5 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
+import Button from "@/components/Button";
 
 export default function Page() {
   const { refresh } = useRouter();
@@ -10,12 +11,7 @@ export default function Page() {
       <p className="rounded-md bg-neutral-800/90 p-2">
         You can try to refresh the page to see if the issue is resolved.
       </p>
-      <button
-        className="rounded-full bg-neutral-950 px-4 py-2 font-bold enabled:hover:bg-neutral-700"
-        onClick={refresh}
-      >
-        Refresh
-      </button>
+      <Button onClick={refresh}>Refresh</Button>
     </main>
   );
 }
