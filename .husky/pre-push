@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Unit tests
+npm run test:ci
+
+# Storybook tests
+npm run build-storybook -- --quiet
+npx concurrently -k -s first -n "SB,TEST" \
+  "npx http-server storybook-static --port 6006 --silent" \
+  "npx wait-on tcp:127.0.0.1:6006 && npm run test-storybook"
+
+# e2e tests
+npm run e2e
