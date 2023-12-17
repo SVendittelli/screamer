@@ -11,4 +11,5 @@ npx concurrently -k -s first -n "SB,TEST" \
   "npx wait-on tcp:127.0.0.1:6006 && npm run test-storybook"
 
 # e2e tests
+npx playwright install
 npm run e2e

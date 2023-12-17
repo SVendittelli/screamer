@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+#!/bin/sh
+
+# post-checkout hook - looks for changes to package-lock.json, and if
+# found, reinstalls the given packages every time you `git merge` or `git pull`
+
+# Adapted from: https://gist.github.com/8bitDesigner/5869846
+
+function changed {
+  git diff --name-only HEAD@{2} HEAD | grep "^$1" > /dev/null 2>&1
+}
+
+if changed 'package-lock.json'; then
+  echo "📦 package-lock.json changed. Running npm install to bring your dependencies up to date."
+  npm install
+fi
