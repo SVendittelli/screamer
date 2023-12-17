@@ -7,7 +7,7 @@ env:
   SUPERTOKENS_CONNECTION_URI: ${{ secrets.SUPERTOKENS_CONNECTION_URI }}
 
 jobs:
-  test:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
