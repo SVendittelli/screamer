@@ -10,7 +10,7 @@
     "e2e:ui": "playwright test --ui",
     "format": "markdownlint-cli2 --fix **/*.md && prettier --write . && next lint --fix",
     "preinstall": "npx npm-only-allow@latest --PM npm",
-    "postinstall": "prisma generate",
+    "postinstall": "prisma generate && playwright install",
     "lint": "run-s lint:*",
     "lint:md": "markdownlint-cli2 **/*.md",
     "lint:next": "next lint",
