@@ -46,6 +46,11 @@ const nextConfig = withBundleAnalyzer({ enabled: env.ANALYZE })({
         permanent: true,
       },
       {
+        source: "/roadmap",
+        destination: "https://github.com/users/SVendittelli/projects/2",
+        permanent: true,
+      },
+      {
         source: "/view-source",
         destination: "https://github.com/SVendittelli/screamer",
         permanent: true,
