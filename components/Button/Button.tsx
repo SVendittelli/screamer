@@ -3,24 +3,18 @@ import Link from "next/link";
 import { ButtonHTMLAttributes, FC } from "react";
 import { twMerge } from "tailwind-merge";
 
-const button = cva(
-  [
-    "text-white",
-    "no-underline",
-    "w-full",
-    "rounded-full",
-    "bg-neutral-950",
-    "px-4",
-    "py-2",
-    "font-bold",
-    "enabled:hover:bg-neutral-700",
-    "disabled:opacity-75",
-  ],
-  {
-    variants: {},
-    defaultVariants: {},
-  },
-);
+const button = cva([
+  "text-white",
+  "no-underline",
+  "w-full",
+  "rounded-full",
+  "bg-neutral-950",
+  "px-4",
+  "py-2",
+  "font-bold",
+  "enabled:hover:bg-neutral-700",
+  "disabled:opacity-75",
+]);
 
 interface Props
   extends ButtonHTMLAttributes<HTMLButtonElement>,
