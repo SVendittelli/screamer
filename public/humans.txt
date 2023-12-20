@@ -1,0 +1,14 @@
+/* TEAM */
+Developer: Sam Vendittelli
+Contact: sam.vendittelli@hotmail.com
+Site: https://vendittelli.co.uk/
+GitHub: https://github.com/SVendittelli/
+Location: Maidenhead, UK
+
+/* SITE */
+Last update: 2023/10/20
+Language: English
+Components: Next.js
+Software: Visual Studio Code, GitHub
+
+/* What is this file? See here: https://humanstxt.org/ */
