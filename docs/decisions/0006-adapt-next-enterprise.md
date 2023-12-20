@@ -50,7 +50,7 @@ The following are the features offered by the template, those with a check mark 
 - ✅ [Bundle analyzer plugin](https://www.npmjs.com/package/@next/bundle-analyzer)
 - ✅ [Unit](https://jestjs.io/), [integration](https://testing-library.com/react), and [e2e](https://playwright.dev/) tests
 - ✅ [Storybook](https://storybook.js.org/) components
-- [Conventional commits git hook](https://www.conventionalcommits.org/)
+- ✅ [Conventional commits git hook](https://www.conventionalcommits.org/)
 - [Open Telemetry](https://opentelemetry.io/) integration
 - ✅ [Absolute imports](https://nextjs.org/docs/advanced-features/module-path-aliases)
 - [Health checks](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) for k8s

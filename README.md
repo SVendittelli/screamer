@@ -1,4 +1,4 @@
-# 🩸 Screamer
+# 🩸 Screamer<!-- omit in toc -->
 
 [![license](https://img.shields.io/github/license/SVendittelli/screamer.svg)](LICENSE)
 [![Production deployment](https://img.shields.io/github/deployments/SVendittelli/screamer/production?label=deploy)](https://github.com/SVendittelli/screamer/deployments/activity_log?environment=production)
@@ -11,15 +11,17 @@
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 [![wakatime](https://wakatime.com/badge/github/SVendittelli/screamer.svg)](https://wakatime.com/badge/github/SVendittelli/screamer)
 
 The original voting app for selecting movies to watch on Halloween.
 
-## Table of Contents
+## Table of Contents<!-- omit in toc -->
 
 - [Install](#install)
   - [Dependencies](#dependencies)
 - [Usage](#usage)
+- [API](#api)
 - [Security](#security)
 - [Maintainer](#maintainer)
 - [Acknowledgements](#acknowledgements)
@@ -35,22 +37,28 @@ npm install
 ### Dependencies
 
 - [node](https://nodejs.org/) - 20.x
-- [Vercel CLI](https://vercel.com/docs/cli) (run `vercel login`)
 
 ## Usage
 
+See [Your First Code Contribution](./CONTRIBUTING.md#your-first-code-contribution) to find first time setup steps.
+
 ```terminal
-vercel env pull .env
 npm run dev
 ```
 
 Open <http://localhost:3000> with your browser to see the site.
 
+## API
+
+[Screamer API](https://halloween.vendittelli.co.uk/swagger).
+
 ## Security
 
 The project's [security policy](https://github.com/SVendittelli/screamer/security/policy) can be found in the [`SECURITY.md`](./SECURITY.md).
 
-Security issue can be reported via [GitHub](https://github.com/SVendittelli/screamer/security/advisories).
+If you believe you have found a security vulnerability, please report it through [GitHub's Security Advisories](https://github.com/SVendittelli/screamer/security/advisories).
+
+**Please do not report security vulnerabilities through public GitHub issues, discussions, or pull requests.**
 
 This information is also made available in line with the [proposed standard](https://securitytxt.org/) at [halloween.vendittelli.co.uk/.well-known/security.txt](https://halloween.vendittelli.co.uk/.well-known/security.txt).
 
@@ -66,7 +74,11 @@ Documentation site based on the site of the [Markdown Any Decision Records](http
 
 ## Contributing
 
-PRs accepted.
+Feel free to dive in! See [the contributing file](CONTRIBUTING.md) or [open an issue](https://github.com/RichardLitt/standard-readme/issues/new).
+
+Screamer follows the [Contributor Covenant Code of Conduct](./CODE_OF_CONDUCT.md).
+
+_Small note:_ If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## License
 
