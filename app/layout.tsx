@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Screamer",
     default: "Screamer",
   },
+  authors: { url: "/humans.txt" },
   description,
   metadataBase: new URL(baseUrl),
   openGraph: {
