@@ -11,6 +11,7 @@
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 [![wakatime](https://wakatime.com/badge/github/SVendittelli/screamer.svg)](https://wakatime.com/badge/github/SVendittelli/screamer)
 
 The original voting app for selecting movies to watch on Halloween.
@@ -46,6 +47,10 @@ npm run dev
 
 Open <http://localhost:3000> with your browser to see the site.
 
+## API
+
+[Screamer API](https://halloween.vendittelli.co.uk/swagger).
+
 ## Security
 
 The project's [security policy](https://github.com/SVendittelli/screamer/security/policy) can be found in the [`SECURITY.md`](./SECURITY.md).
@@ -66,7 +71,11 @@ Documentation site based on the site of the [Markdown Any Decision Records](http
 
 ## Contributing
 
-PRs accepted.
+Feel free to dive in! See [the contributing file](CONTRIBUTING.md) or [open an issue](https://github.com/RichardLitt/standard-readme/issues/new).
+
+Screamer follows the [Contributor Covenant Code of Conduct](./CODE_OF_CONDUCT.md).
+
+_Small note:_ If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## License
 
