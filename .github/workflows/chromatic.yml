@@ -2,9 +2,11 @@ name: "Chromatic Publish"
 
 on: push
 
+# Add required environment variables to satisfy build, they are blank as the relevant dependencies are mocked
 env:
-  SUPERTOKENS_API_KEY: ${{ secrets.SUPERTOKENS_API_KEY }}
-  SUPERTOKENS_CONNECTION_URI: ${{ secrets.SUPERTOKENS_CONNECTION_URI }}
+  DATABASE_URL: ""
+  SUPERTOKENS_API_KEY: ""
+  SUPERTOKENS_CONNECTION_URI: ""
 
 jobs:
   publish:

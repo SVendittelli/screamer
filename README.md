@@ -1,4 +1,4 @@
-# 🩸 Screamer
+# 🩸 Screamer<!-- omit in toc -->
 
 [![license](https://img.shields.io/github/license/SVendittelli/screamer.svg)](LICENSE)
 [![Production deployment](https://img.shields.io/github/deployments/SVendittelli/screamer/production?label=deploy)](https://github.com/SVendittelli/screamer/deployments/activity_log?environment=production)
@@ -16,11 +16,12 @@
 
 The original voting app for selecting movies to watch on Halloween.
 
-## Table of Contents
+## Table of Contents<!-- omit in toc -->
 
 - [Install](#install)
   - [Dependencies](#dependencies)
 - [Usage](#usage)
+- [API](#api)
 - [Security](#security)
 - [Maintainer](#maintainer)
 - [Acknowledgements](#acknowledgements)
@@ -36,12 +37,12 @@ npm install
 ### Dependencies
 
 - [node](https://nodejs.org/) - 20.x
-- [Vercel CLI](https://vercel.com/docs/cli) (run `vercel login`)
 
 ## Usage
 
+See [Your First Code Contribution](./CONTRIBUTING.md#your-first-code-contribution) to find first time setup steps.
+
 ```terminal
-vercel env pull .env
 npm run dev
 ```
 
@@ -55,7 +56,9 @@ Open <http://localhost:3000> with your browser to see the site.
 
 The project's [security policy](https://github.com/SVendittelli/screamer/security/policy) can be found in the [`SECURITY.md`](./SECURITY.md).
 
-Security issue can be reported via [GitHub](https://github.com/SVendittelli/screamer/security/advisories).
+If you believe you have found a security vulnerability, please report it through [GitHub's Security Advisories](https://github.com/SVendittelli/screamer/security/advisories).
+
+**Please do not report security vulnerabilities through public GitHub issues, discussions, or pull requests.**
 
 This information is also made available in line with the [proposed standard](https://securitytxt.org/) at [halloween.vendittelli.co.uk/.well-known/security.txt](https://halloween.vendittelli.co.uk/.well-known/security.txt).
 

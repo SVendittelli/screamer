@@ -15,6 +15,7 @@ export const env = createEnv({
       .string()
       .optional()
       .transform((value) => !!value && value !== "false" && value !== "0"),
+    DATABASE_URL: z.string(),
     EDGE_CONFIG: z.string().optional(),
     NODE_ENV: z
       .enum(["development", "production", "test"])
@@ -44,6 +45,7 @@ export const env = createEnv({
     ADMINS: process.env.ADMINS,
     ANALYZE: process.env.ANALYZE,
     CI: process.env.CI,
+    DATABASE_URL: process.env.DATABASE_URL,
     EDGE_CONFIG: process.env.EDGE_CONFIG,
     NODE_ENV: process.env.NODE_ENV,
     SUPERTOKENS_API_KEY: process.env.SUPERTOKENS_API_KEY,
