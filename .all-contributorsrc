@@ -1,9 +1,7 @@
 {
   "projectName": "screamer",
   "projectOwner": "SVendittelli",
-  "files": [
-    "README.md"
-  ],
+  "files": ["README.md"],
   "commitType": "docs",
   "commitConvention": "angular",
   "contributorsPerLine": 7,
