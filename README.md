@@ -7,6 +7,7 @@
 [![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m795811614-7df5f2fde9ddb5b3e00c28e1)](https://stats.uptimerobot.com/80zk0uXpKG/795811614)
 [![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/halloween.vendittelli.co.uk?publish)](https://observatory.mozilla.org/analyze/halloween.vendittelli.co.uk)
 [![Known Vulnerabilities](https://snyk.io/test/github/SVendittelli/screamer/badge.svg)](https://snyk.io/test/github/SVendittelli/screamer)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/8226/badge)](https://www.bestpractices.dev/projects/8226)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
