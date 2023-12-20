@@ -12,6 +12,7 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+[![All Contributors](https://img.shields.io/github/all-contributors/SVendittelli/screamer?color=ee8449)](#contributors)
 [![wakatime](https://wakatime.com/badge/github/SVendittelli/screamer.svg)](https://wakatime.com/badge/github/SVendittelli/screamer)
 
 The original voting app for selecting movies to watch on Halloween.
@@ -26,6 +27,7 @@ The original voting app for selecting movies to watch on Halloween.
 - [Maintainer](#maintainer)
 - [Acknowledgements](#acknowledgements)
 - [Contributing](#contributing)
+  - [Contributors](#contributors)
 - [License](#license)
 
 ## Install
@@ -79,6 +81,17 @@ Feel free to dive in! See [the contributing file](CONTRIBUTING.md) or [open an i
 Screamer follows the [Contributor Covenant Code of Conduct](./CODE_OF_CONDUCT.md).
 
 _Small note:_ If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+
+### Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License
 
