@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { FC, useState } from "react";
 import Button from "@/components/Button";
-import Logo from "@/components/Logo";
 import { convertRuntime } from "@/libs/runtime";
 import { type Rating, sampleData } from "./sample-data";
 
@@ -34,12 +33,7 @@ export default function DemoPage() {
     setIndex((index - 1 + sampleData.length) % sampleData.length);
 
   return (
-    <div className="min-h-screen w-screen p-4">
-      <header className="flex gap-6 pb-2">
-        <Logo />
-        <Button onClick={prev}>Prev</Button>
-        <Button onClick={next}>Next</Button>
-      </header>
+    <div className="min-h-full w-full p-4">
       <main>
         <div id="poster" className="relative aspect-poster w-full max-w-md">
           <Image src={movie!.poster} alt={``} fill className="object-contain" />
@@ -86,6 +80,10 @@ export default function DemoPage() {
           </div>
         </article>
       </main>
+      <footer className="flex gap-6 pt-2">
+        <Button onClick={prev}>Prev</Button>
+        <Button onClick={next}>Next</Button>
+      </footer>
     </div>
   );
 }
