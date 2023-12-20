@@ -33,6 +33,7 @@
   "dependencies": {
     "@prisma/client": "5.7.1",
     "@radix-ui/react-accessible-icon": "1.0.3",
+    "@radix-ui/react-avatar": "1.0.4",
     "@t3-oss/env-nextjs": "0.7.1",
     "@types/swagger-ui-react": "4.18.3",
     "@vercel/analytics": "1.1.1",
