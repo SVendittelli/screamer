@@ -1,10 +1,6 @@
----
-title:
----
-
 <!--- Provide a general summary of your changes in the Title above -->
 
-### Description
+### Description<!-- markdownlint-disable-line MD041 -->
 
 <!--- Describe your changes in detail and the related issue. Please also include relevant motivation and context. -->
 
@@ -27,4 +23,4 @@ Closes #issue
 - [ ] I have added tests that prove my fix is effective or that my feature works
 - [ ] New and existing tests pass locally with my changes
 
-<!-- IMPORTANT: Please review the [CONTRIBUTING.md](../CONTRIBUTING.md) file for detailed contributing guidelines. -->
+<!-- IMPORTANT: Please review the CONTRIBUTING.md file for detailed contributing guidelines. -->
