@@ -1,9 +1,13 @@
 import { Metadata } from "next";
+import { FC, PropsWithChildren } from "react";
+import SidebarLayout from "@/components/SidebarLayout";
 
 export const metadata: Metadata = {
   title: "Demo",
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
-}
+const Layout: FC<PropsWithChildren> = ({ children }) => {
+  return <SidebarLayout className="bg-black">{children}</SidebarLayout>;
+};
+
+export default Layout;

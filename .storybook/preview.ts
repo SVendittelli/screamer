@@ -2,6 +2,7 @@ import { withThemeByClassName } from "@storybook/addon-themes";
 import type { Preview, ReactRenderer } from "@storybook/react";
 import { themeModes } from "./modes";
 import theme from "./theme";
+import { decorator } from "./__mocks__/supertokens-auth-react/recipe/session.ts";
 
 import "../styles/globals.css";
 import "./preview.css";
@@ -22,6 +23,9 @@ const preview: Preview = {
     },
     docs: {
       theme,
+    },
+    nextjs: {
+      appDirectory: true,
     },
     viewport: {
       viewports: {
@@ -60,8 +64,8 @@ const preview: Preview = {
       },
     },
   },
-
   decorators: [
+    decorator,
     withThemeByClassName<ReactRenderer>({
       themes: {
         light: "",

@@ -29,5 +29,10 @@ const config: StorybookConfig = {
         prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
     },
   },
+  webpackFinal: async (config) => {
+    config.resolve!.alias!["supertokens-auth-react/recipe/session"] =
+      require.resolve("./__mocks__/supertokens-auth-react/recipe/session.ts");
+    return config;
+  },
 };
 export default config;
