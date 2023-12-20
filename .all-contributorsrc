@@ -1,4 +1,25 @@
 {
   "projectName": "screamer",
-  "projectOwner": "SVendittelli"
+  "projectOwner": "SVendittelli",
+  "files": ["README.md"],
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "contributors": [
+    {
+      "login": "SVendittelli",
+      "name": "Sam Vendittelli",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17616742?v=4",
+      "profile": "https://github.com/SVendittelli",
+      "contributions": [
+        "code",
+        "doc",
+        "design",
+        "maintenance",
+        "projectManagement",
+        "security",
+        "test"
+      ]
+    }
+  ]
 }

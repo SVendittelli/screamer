@@ -87,6 +87,13 @@ _Small note:_ If editing the README, please conform to the [standard-readme](htt
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/SVendittelli"><img src="https://avatars.githubusercontent.com/u/17616742?v=4?s=100" width="100px;" alt="Sam Vendittelli"/><br /><sub><b>Sam Vendittelli</b></sub></a><br /><a href="#code-SVendittelli" title="Code">💻</a> <a href="#doc-SVendittelli" title="Documentation">📖</a> <a href="#design-SVendittelli" title="Design">🎨</a> <a href="#maintenance-SVendittelli" title="Maintenance">🚧</a> <a href="#projectManagement-SVendittelli" title="Project Management">📆</a> <a href="#security-SVendittelli" title="Security">🛡️</a> <a href="#test-SVendittelli" title="Tests">⚠️</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
