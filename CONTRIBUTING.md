@@ -22,6 +22,7 @@ The community looks forward to your contributions. 🎉
   - [Suggesting Enhancements](#suggesting-enhancements)
   - [Your First Code Contribution](#your-first-code-contribution)
   - [Improving The Documentation](#improving-the-documentation)
+  - [Add Yourself as a Contributor](#add-yourself-as-a-contributor)
 - [Styleguides](#styleguides)
   - [Commit Messages](#commit-messages)
 
@@ -183,6 +184,8 @@ For more details about writing tests and the testing strategy for Screamer, plea
 
 #### Submitting a Pull Request<!-- omit in toc -->
 
+Please [raise a pull request](https://github.com/SVendittelli/screamer/pulls) with your changes to the `main` branch using the pull request template.
+
 ### Improving The Documentation
 
 All the documentation is written in markdown and stored in the `/docs` folder.
@@ -191,6 +194,10 @@ The docs are built using jekyll and details about running them locally can be fo
 #### Decision Records<!-- omit in toc -->
 
 If you are proposing a new major decision for the project, please create an ADR following the guidance in [`docs/decisions/index.md`](./docs/decisions/index.md).
+
+### Add Yourself as a Contributor
+
+To add yourself to the table of contributors, follow the [@all-contributors bot usage instructions](https://allcontributors.org/docs/en/bot/usage).
 
 ## Styleguides
 
