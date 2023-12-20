@@ -40,9 +40,7 @@ export default function DemoPage() {
         </div>
         <article className="prose prose-neutral prose-invert flex flex-col gap-2">
           <div id="details">
-            <h1 className="mb-0 mt-2">
-              {movie!.title} ({movie!.year})
-            </h1>
+            <h1 className="mb-0 mt-2">{`${movie!.title} (${movie!.year})`}</h1>
             <div className="flex gap-2 align-baseline">
               <Image
                 className="m-0"
