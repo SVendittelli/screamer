@@ -22,6 +22,7 @@ const config = {
     "./config/**",
     "./libs/**",
     "./middleware.ts",
+    "!./components/**/*.stories.tsx",
   ],
   coverageDirectory: "./coverage/jest",
 };
