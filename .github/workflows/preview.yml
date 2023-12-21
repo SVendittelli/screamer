@@ -13,7 +13,7 @@ jobs:
   delete:
     runs-on: ubuntu-latest
     steps:
-      - uses: snaplet/vercel-action@v3.0.1
+      - uses: snaplet/vercel-action@a84e8e02e05dc563cb94bf816c04a8c6d135571f # v3.0.1
         with:
           delete: true
           ignored-build-command: ""
