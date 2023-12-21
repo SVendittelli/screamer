@@ -15,6 +15,15 @@ const config = {
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/$1",
   },
+  collectCoverage: true,
+  collectCoverageFrom: [
+    "./app/**",
+    "./components/**",
+    "./config/**",
+    "./libs/**",
+    "./middleware.ts",
+  ],
+  coverageDirectory: "./coverage/jest",
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

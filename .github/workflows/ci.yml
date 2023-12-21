@@ -40,11 +40,24 @@ jobs:
         run: npm run test:ci
       - name: Smoke & Acceptance tests
         run: |
-          npm run build-storybook --quiet
           npx playwright install
-          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-            "npx http-server storybook-static --port 6006 --silent" \
-            "npx wait-on tcp:127.0.0.1:6006 && npm run test-storybook"
+          npm run test:storybook
+      - name: Upload jest coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          fail_ci_if_error: true
+          flags: jest
+          directory: coverage/jest
+      - name: Upload storybook coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          fail_ci_if_error: true
+          flags: storybook
+          directory: coverage/storybook
 
   e2e-tests:
     needs: lint-and-build
