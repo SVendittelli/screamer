@@ -10,7 +10,11 @@ nav_order: 1
 
 > The original voting app for selecting movies to watch on Halloween
 
-Screamer is the an application for submitting and voting on movie to watch as part of a halloween horror movie marathon.
+Screamer is the an application for submitting and voting on movies to watch as part of a halloween horror movie marathon.
+
+## Background
+
+> 80% of web applications are just a fancy replacement of somebody&#39;s excel file somewhere</p>&mdash; Ryan Winchester (@ryanrwinchester) [December 2, 2023](https://twitter.com/ryanrwinchester/status/1730806352782430423?ref_src=twsrc%5Etfw)
 
 ## API Specification
 

@@ -17,8 +17,11 @@
 
 The original voting app for selecting movies to watch on Halloween.
 
+Screamer is the an application for submitting and voting on movies to watch as part of a halloween horror movie marathon.
+
 ## Table of Contents<!-- omit in toc -->
 
+- [Background](#background)
 - [Install](#install)
   - [Dependencies](#dependencies)
 - [Usage](#usage)
@@ -29,6 +32,10 @@ The original voting app for selecting movies to watch on Halloween.
 - [Contributing](#contributing)
   - [Contributors](#contributors)
 - [License](#license)
+
+## Background
+
+> 80% of web applications are just a fancy replacement of somebody&#39;s excel file somewhere</p>&mdash; Ryan Winchester (@ryanrwinchester) [December 2, 2023](https://twitter.com/ryanrwinchester/status/1730806352782430423?ref_src=twsrc%5Etfw)
 
 ## Install
 
@@ -84,6 +91,8 @@ _Small note:_ If editing the README, please conform to the [standard-readme](htt
 
 ### Contributors
 
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -99,6 +108,9 @@ _Small note:_ If editing the README, please conform to the [standard-readme](htt
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification.
+Contributions of any kind welcome.
 
 ## License
 
