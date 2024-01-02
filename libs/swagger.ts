@@ -1,5 +1,5 @@
 import { createSwaggerSpec } from "next-swagger-doc";
-import { baseUrl } from "@/libs/constants";
+import { BASE_URL } from "@/libs/constants";
 import { version } from "@/libs/constants/version";
 
 export const getApiDocs = async () => {
@@ -10,20 +10,20 @@ export const getApiDocs = async () => {
       info: {
         title: "🩸 Screamer API",
         summary: "The RESTful API for Screamer.",
-        description: `To acquire an access token for the API please visit [/auth](${baseUrl}/auth) endpoint.`,
+        description: `To acquire an access token for the API please visit [/auth](${BASE_URL}/auth) endpoint.`,
         version,
         license: {
           name: "MIT",
-          url: `${baseUrl}/license`,
+          url: `${BASE_URL}/license`,
         },
       },
       externalDocs: {
         description: "Find out more about Screamer",
-        url: `${baseUrl}/docs`,
+        url: `${BASE_URL}/docs`,
       },
       servers: [
         {
-          url: `${baseUrl}/api`,
+          url: `${BASE_URL}/api`,
         },
       ],
       tags: [

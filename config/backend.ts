@@ -8,7 +8,7 @@ import UserRoles from "supertokens-node/recipe/userroles";
 import { TypeInput } from "supertokens-node/types";
 import { appInfo } from "@/config/appInfo";
 import { env } from "@/env.mjs";
-import { baseUrl } from "@/libs/constants";
+import { BASE_URL } from "@/libs/constants";
 
 export const backendConfig = (): TypeInput => {
   return {
@@ -17,7 +17,7 @@ export const backendConfig = (): TypeInput => {
       connectionURI: env.SUPERTOKENS_CONNECTION_URI,
       apiKey: env.SUPERTOKENS_API_KEY,
     },
-    appInfo: appInfo(baseUrl),
+    appInfo: appInfo(BASE_URL),
     recipeList: [
       Dashboard.init({ admins: env.ADMINS }),
       Passwordless.init({

@@ -1,7 +1,7 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { SuperTokensProvider } from "@/components/SuperTokensProvider";
-import { baseUrl } from "@/libs/constants";
+import { BASE_URL } from "@/libs/constants";
 import { description, title } from "@/libs/constants/branding";
 import { sha, version } from "@/libs/constants/version";
 import { inter } from "@/libs/fonts";
@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   },
   authors: { url: "/humans.txt" },
   description,
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL(BASE_URL),
   openGraph: {
     title,
     type: "website",
     locale: "en_GB",
-    url: baseUrl,
+    url: BASE_URL,
     description,
   },
   twitter: {
