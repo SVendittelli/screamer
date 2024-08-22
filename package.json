@@ -5,6 +5,7 @@
   "scripts": {
     "analyze": "cross-env ANALYZE=true npm run build",
     "build": "next build",
+    "build-storybook": "storybook build",
     "commit": "git-cz",
     "dev": "next dev",
     "e2e": "playwright test",
@@ -13,20 +14,19 @@
     "preinstall": "npx npm-only-allow@latest --PM npm",
     "postinstall": "prisma generate",
     "lint": "run-s lint:*",
+    "lint:all": "prettier --check --ignore-unknown .",
     "lint:md": "markdownlint-cli2 **/*.md",
     "lint:next": "next lint",
-    "lint:all": "prettier --check --ignore-unknown .",
     "migrate": "prisma migrate deploy",
     "prepare": "husky install",
     "start": "next start",
+    "storybook": "storybook dev -p 6006",
     "test": "jest --watch",
+    "test-storybook": "test-storybook --coverage",
     "test:ci": "jest --ci",
     "pretest:storybook": "npm run build-storybook",
     "test:storybook": "start-server-and-test 'http-server storybook-static --port 6006 --silent' http://localhost:6006 test-storybook",
-    "posttest:storybook": "nyc report --reporter=lcov -t coverage/storybook --report-dir coverage/storybook",
-    "storybook": "storybook dev -p 6006",
-    "test-storybook": "test-storybook --coverage",
-    "build-storybook": "storybook build"
+    "posttest:storybook": "nyc report --reporter=lcov -t coverage/storybook --report-dir coverage/storybook"
   },
   "config": {
     "commitizen": {
