@@ -17,7 +17,7 @@ describe("sampleData", () => {
   it("contains only movies with posters", () => {
     sampleData.forEach((movie) => {
       expect(movie.poster).toBeDefined();
-      expect(movie.poster).toMatch(/^https?:\/\/m.media-amazon.com/);
+      expect(movie.poster).toMatch(/^https?:\/\/m\.media-amazon\.com/);
     });
   });
 
