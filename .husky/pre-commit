@@ -1,7 +1,4 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 echo "[Husky] pre-commit"
-npx lint-staged
+lint-staged
 npm run lint
 ./check-gitattributes.sh

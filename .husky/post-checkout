@@ -1,6 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 # post-checkout hook - looks for changes to package-lock.json,
 # when you change branches, and if found, reinstalls the given packages every
 
