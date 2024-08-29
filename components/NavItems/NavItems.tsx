@@ -17,7 +17,7 @@ const appNavItems: NavItemProps[] = [
   {
     label: "Home",
     href: "/",
-    icon: <FaHouse className="w-6 h-6" />,
+    icon: <FaHouse className="size-6" />,
   },
 ];
 
@@ -25,25 +25,25 @@ const otherNavItems: NavItemProps[] = [
   {
     label: "Roadmap",
     href: "/roadmap",
-    icon: <FaRoad className="w-6 h-6" />,
+    icon: <FaRoad className="size-6" />,
     prefetch: false,
   },
   {
     label: "Documentation",
     href: "/docs",
-    icon: <FaBook className="w-6 h-6" />,
+    icon: <FaBook className="size-6" />,
     prefetch: false,
   },
   {
     label: "View Source",
     href: "/view-source",
-    icon: <FaGithub className="w-6 h-6" />,
+    icon: <FaGithub className="size-6" />,
     prefetch: false,
   },
   {
     label: "Open API Specification",
     href: "/swagger",
-    icon: <SiSwagger className="w-6 h-6" />,
+    icon: <SiSwagger className="size-6" />,
   },
 ];
 
@@ -64,7 +64,7 @@ const NavItems: FC<NavItemsProps> = ({ className }) => {
     adminNavItems.push({
       label: "User Dashboard",
       href: "/api/auth/dashboard",
-      icon: <FaUserShield className="w-6 h-6" />,
+      icon: <FaUserShield className="size-6" />,
     });
   }
 

@@ -24,7 +24,7 @@ const Header: FC<HeaderProps> = ({ className, onMenuButtonClick }) => {
       <div className="grow"></div>
       <button className="tablet:hidden" onClick={onMenuButtonClick}>
         <Icon label="Toggle sidebar">
-          <FaBars className="h-6 w-6" />
+          <FaBars className="size-6" />
         </Icon>
       </button>
     </header>
