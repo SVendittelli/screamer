@@ -61,9 +61,9 @@
     "zod-validation-error": "2.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "18.4.4",
-    "@commitlint/config-conventional": "18.4.4",
-    "@commitlint/cz-commitlint": "18.4.4",
+    "@commitlint/cli": "19.4.0",
+    "@commitlint/config-conventional": "19.2.2",
+    "@commitlint/cz-commitlint": "19.4.0",
     "@next/bundle-analyzer": "14.0.4",
     "@playwright/test": "1.41.2",
     "@storybook/addon-a11y": "7.6.7",
