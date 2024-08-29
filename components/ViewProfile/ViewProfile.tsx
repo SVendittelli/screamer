@@ -46,8 +46,8 @@ const ViewProfile: FC<ViewProfileProps> = ({
   return (
     <div className={twMerge(viewProfile({ className }))}>
       <div className="flex gap-4 items-center">
-        <Avatar.Root className="w-9 h-9 select-none">
-          <Avatar.AvatarFallback className="w-full h-full rounded-full flex items-center justify-center bg-white text-slate-950">
+        <Avatar.Root className="size-9 select-none">
+          <Avatar.AvatarFallback className="size-full rounded-full flex items-center justify-center bg-white text-slate-950">
             {getInitials(name)}
           </Avatar.AvatarFallback>
         </Avatar.Root>
