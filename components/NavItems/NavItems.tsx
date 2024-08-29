@@ -57,7 +57,7 @@ const NavItems: FC<NavItemsProps> = ({ className }) => {
   const roles = useClaimValue(UserRoleClaim);
   const isAdmin = roles.loading
     ? false
-    : roles.value?.includes("admin") ?? false;
+    : (roles.value?.includes("admin") ?? false);
 
   const adminNavItems: NavItemProps[] = [];
   if (isAdmin) {
