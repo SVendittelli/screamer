@@ -21,6 +21,8 @@ jobs:
         with:
           node-version-file: "package.json"
           cache: "npm"
+
+      - run: corepack enable
       - run: npm ci
 
       - name: Publish to Chromatic

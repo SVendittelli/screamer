@@ -1,4 +1,5 @@
 {
+  "$schema": "https://www.chromatic.com/config-file.schema.json",
   "onlyChanged": true,
   "projectId": "Project:6577b2c83da1ff1b4f69c1cb",
   "zip": true
