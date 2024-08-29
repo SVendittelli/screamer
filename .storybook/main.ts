@@ -12,13 +12,11 @@ const config: StorybookConfig = {
     "@storybook/addon-themes",
     "@storybook/addon-a11y",
     "@storybook/addon-coverage",
+    "@chromatic-com/storybook",
   ],
   framework: {
     name: "@storybook/nextjs",
     options: {},
-  },
-  docs: {
-    autodocs: "tag",
   },
   core: {
     disableTelemetry: true,

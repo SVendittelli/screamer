@@ -21,10 +21,12 @@ jobs:
         with:
           node-version-file: "package.json"
           cache: "npm"
+
+      - run: corepack enable
       - run: npm ci
 
       - name: Publish to Chromatic
-        uses: chromaui/action@c9067691aca4a28d6fbb40d9eea6e144369fbcae # v10
+        uses: chromaui/action@b984808b772126a9f44b2b7737b131b68a2ede32 # v11
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           exitOnceUploaded: true

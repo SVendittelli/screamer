@@ -4,7 +4,6 @@ import SidebarLayout from "./SidebarLayout";
 const meta: Meta<typeof SidebarLayout> = {
   component: SidebarLayout,
   title: "Layout",
-  tags: ["autodocs"],
   parameters: { layout: "fullscreen" },
   args: {},
   argTypes: {},

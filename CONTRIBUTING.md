@@ -178,7 +178,7 @@ There are three kinds of tests for Screamer, each has have their own commands:
 
 1. Unit tets: `npm test` - Note, this runs in an interactive "watch mode". If you just want to run them all and then exit use `npm run test:ci`
 2. e2e tests: `npx playwright install && npm run e2e` - To run these tests with a UI, use `npm run e2e:ui`
-3. Smoke/Acceptance tests: In one terminal run `npm run storybook` and in a separate terminal run `npm run test-storybook`
+3. Smoke/Acceptance tests: In one terminal run `npm run storybook` and in a separate terminal run `npm run test:storybook`
 
 For more details about writing tests and the testing strategy for Screamer, please read [`testing.md`](./docs/testing.md).
 

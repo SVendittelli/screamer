@@ -5,7 +5,6 @@ import Icon from "./Icon";
 const meta: Meta<typeof Icon> = {
   component: Icon,
   title: "Icon",
-  tags: ["autodocs"],
   parameters: { layout: "centered" },
   args: { label: "Icon" },
   argTypes: {},
