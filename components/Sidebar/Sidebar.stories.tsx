@@ -4,7 +4,6 @@ import Sidebar from "./Sidebar";
 const meta: Meta<typeof Sidebar> = {
   component: Sidebar,
   title: "Sidebar",
-  tags: ["autodocs"],
   parameters: { layout: "fullscreen" },
   args: { open: true, setOpen: () => {} },
   argTypes: {

@@ -4,7 +4,6 @@ import ViewProfile from "./ViewProfile";
 const meta: Meta<typeof ViewProfile> = {
   component: ViewProfile,
   title: "ViewProfile",
-  tags: ["autodocs"],
   parameters: {
     layout: "centered",
   },

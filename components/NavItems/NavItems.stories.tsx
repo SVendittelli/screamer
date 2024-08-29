@@ -4,7 +4,6 @@ import NavItems from "./NavItems";
 const meta: Meta<typeof NavItems> = {
   component: NavItems,
   title: "NavItems",
-  tags: ["autodocs"],
   parameters: { layout: "centered" },
   args: {},
   argTypes: {},
