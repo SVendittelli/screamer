@@ -9,6 +9,10 @@
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "groupName": "devDependencies",
       "automerge": true
+    },
+    {
+      "groupName": "supertokens",
+      "matchPackageNames": ["supertokens**"]
     }
   ]
 }
