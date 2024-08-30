@@ -53,7 +53,7 @@
     "supertokens-auth-react": "0.46.0",
     "supertokens-node": "20.0.3",
     "supertokens-web-js": "0.13.0",
-    "swagger-ui-react": "5.11.0",
+    "swagger-ui-react": "5.17.14",
     "tailwind-merge": "2.5.2",
     "usehooks-ts": "3.1.0",
     "validator": "13.12.0",
