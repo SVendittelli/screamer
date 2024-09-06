@@ -22,7 +22,7 @@
 
 # Modified from source: https://github.com/adr/madr/blob/develop/docs/Dockerfile
 
-FROM ruby:3.3@sha256:2a57e5c868eac461dce2d1302dc57e00c94f335712856867c5038b589654de72
+FROM ruby:3.3@sha256:6ffe7c2b09974f3af4da0a7085d40d4ceef147307e4da83e8ec1555a5a342495
 
 ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
