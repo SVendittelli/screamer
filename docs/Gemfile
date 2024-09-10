@@ -8,4 +8,4 @@ gem 'jekyll-relative-links', "0.7.0"
 
 gem 'jekyll-titles-from-headings', '0.5.3'
 
-gem "just-the-docs", "0.9.0"
+gem "just-the-docs", "0.10.0"
