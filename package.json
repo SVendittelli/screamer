@@ -58,7 +58,7 @@
     "usehooks-ts": "3.1.0",
     "validator": "13.12.0",
     "zod": "3.23.8",
-    "zod-validation-error": "3.3.1"
+    "zod-validation-error": "3.4.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "2.0.2",
