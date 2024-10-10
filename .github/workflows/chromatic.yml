@@ -26,7 +26,7 @@ jobs:
       - run: npm ci
 
       - name: Publish to Chromatic
-        uses: chromaui/action@6eca23b4399151ac2cfc17fa95190d807c7e9519 # v11
+        uses: chromaui/action@bbbf288765438d5fd2be13e1d80d542a39e74108 # v11
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           exitOnceUploaded: true
